@@ -85,6 +85,14 @@
       </div>
 
       <div class="flex items-center gap-2 shrink-0">
+        <a href="https://docs.google.com/spreadsheets/d/1G6DVMS9WX29V0VhMmij-GEedqmhrEVGWz_9KY_coJOY/edit" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-emerald-950 hover:bg-emerald-900 text-emerald-200 border border-emerald-700/60 transition" title="Open Connected Google Sheet">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span>Google Sheet</span>
+        </a>
+        <button id="btnOpenSheetSetupHeader" type="button" class="inline-flex items-center gap-1.5 px-2.5 py-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-slate-700 transition" title="Configure Google Sheets Auto-Sync">
+          <span id="sheetSyncDot" class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span class="hidden sm:inline">Sheet Sync</span>
+        </button>
         <button id="btnOpenQuickPrompts" type="button" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
           <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
           <span>Ask Prompts</span>
@@ -1039,15 +1047,72 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
     </div>
 
     <!-- ==========================================
-         VIEW 4: SAVED STALL LOGBOOK & EXPORT
+         VIEW 4: SAVED STALL LOGBOOK & GOOGLE SHEETS INSPECTOR
          ========================================== -->
     <div id="view-saved" class="space-y-4 hidden">
+
+      <!-- Google Sheets Integration & Sync Banner -->
+      <section class="bg-gradient-to-r from-emerald-900 via-slate-900 to-slate-900 text-white rounded-2xl p-4 sm:p-5 shadow-sm border border-emerald-800/50">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                Google Sheets Database Connected
+              </span>
+              <span id="sheetConnectionStatusBadge" class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-amber-300 border border-slate-700">
+                Direct Paste Ready • Webhook Optional
+              </span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold">India Chem Stall Notes Logbook (Google Sheets)</h3>
+            <p class="text-xs text-slate-300 max-w-2xl">
+              Store multiple stall records across <strong>Castor_Stall_Notes</strong> and <strong>Petrochem_Pivot_Notes</strong> tabs. Sync automatically via Google Apps Script webhook, or copy tab-formatted rows to paste directly into your Google Sheet.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <a href="https://docs.google.com/spreadsheets/d/1G6DVMS9WX29V0VhMmij-GEedqmhrEVGWz_9KY_coJOY/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-sm transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              <span>Open Google Sheet</span>
+            </a>
+            <button type="button" id="btnSyncAllToSheet" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 transition">
+              <svg class="w-4 h-4 text-emerald-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              <span>Sync All to Sheet</span>
+            </button>
+            <button type="button" id="btnPullFromSheet" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
+              <span>Pull from Sheet</span>
+            </button>
+            <button type="button" id="btnOpenSheetSetup" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-slate-700 transition">
+              <span>Webhook Setup</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Copy TSV Rows for Direct Google Sheet Pasting -->
+        <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap items-center justify-between gap-2 text-xs">
+          <div class="flex items-center gap-2 text-slate-300">
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="chkAutoSyncSheet" class="w-4 h-4 rounded text-emerald-500 focus:ring-emerald-500" checked />
+              <span>Auto-sync new notes to Google Sheet on save</span>
+            </label>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <button type="button" id="btnCopyCastorTsv" class="px-2.5 py-1.5 rounded-lg font-semibold bg-emerald-950/90 hover:bg-emerald-900 text-emerald-200 border border-emerald-700/60 transition">
+              Copy Castor Rows for Sheet (TSV)
+            </button>
+            <button type="button" id="btnCopyPetroTsv" class="px-2.5 py-1.5 rounded-lg font-semibold bg-amber-950/90 hover:bg-amber-900 text-amber-200 border border-amber-700/60 transition">
+              Copy Petro Rows for Sheet (TSV)
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Logbook & Multi-Record Inspector -->
       <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
           <div>
             <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Captured Exhibition Intelligence</span>
-            <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-0.5">Saved Stall Notes Logbook</h3>
-            <p class="text-xs text-slate-500 mt-0.5">All notes are stored locally on your device. Export as TXT/CSV or copy individual stall cards.</p>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-0.5">Saved Stall Notes &amp; Multi-Record Inspector</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Inspect records as cards or in a side-by-side spreadsheet table, search across entries, or export.</p>
           </div>
           <div class="flex flex-wrap items-center gap-2">
             <button type="button" id="btnLoadSampleNotes" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition">
@@ -1062,14 +1127,28 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
           </div>
         </div>
 
-        <!-- Filter Saved Notes -->
-        <div class="flex items-center gap-2 pt-3">
-          <button type="button" data-log-filter="all" class="log-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-900 text-white">All Notes</button>
-          <button type="button" data-log-filter="castor" class="log-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700">Castor Stalls</button>
-          <button type="button" data-log-filter="petro" class="log-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700">Petrochem Pivot</button>
+        <!-- Filter & Display Mode Controls -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <button type="button" data-log-filter="all" class="log-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-white">All Notes</button>
+            <button type="button" data-log-filter="castor" class="log-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700">Castor Stalls</button>
+            <button type="button" data-log-filter="petro" class="log-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700">Petrochem Pivot</button>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <input id="logSearchInput" type="search" placeholder="Search saved records..." aria-label="Search saved records" class="px-3 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            <div class="inline-flex rounded-lg p-0.5 bg-slate-100 border border-slate-200">
+              <button type="button" id="btnDisplayCards" class="px-2.5 py-1 rounded-md text-xs font-bold bg-white text-slate-900 shadow-xs">Cards</button>
+              <button type="button" id="btnDisplayTable" class="px-2.5 py-1 rounded-md text-xs font-semibold text-slate-600 hover:text-slate-900">Sheet Table</button>
+            </div>
+          </div>
         </div>
 
+        <!-- Cards Container -->
         <div id="savedNotesContainer" class="mt-4 space-y-3"></div>
+
+        <!-- Spreadsheet Table Inspector Container -->
+        <div id="savedTableContainer" class="mt-4 hidden space-y-6"></div>
       </section>
     </div>
 
@@ -1136,6 +1215,132 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
     </div>
   </div>
 
+  <!-- Google Sheets Live Webhook Setup Modal -->
+  <div id="modalSheetSetup" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs hidden items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white w-full max-w-2xl rounded-t-2xl sm:rounded-2xl shadow-xl border border-slate-200 max-h-[88vh] flex flex-col overflow-hidden">
+      <div class="p-4 bg-slate-900 text-white flex items-center justify-between">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Google Sheets Live Bridge</span>
+          <h3 class="text-base font-bold">Connect HTML App to Your Google Sheet</h3>
+        </div>
+        <button type="button" id="btnCloseSheetSetup" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center font-bold">✕</button>
+      </div>
+
+      <div class="p-4 sm:p-5 overflow-y-auto space-y-4 text-xs sm:text-sm">
+        <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <span class="font-bold text-emerald-950 block">Your Connected Google Sheet is Ready:</span>
+            <p class="text-xs text-emerald-800 mt-0.5">Contains pre-structured <strong>Castor_Stall_Notes</strong> &amp; <strong>Petrochem_Pivot_Notes</strong> tabs with initial records.</p>
+          </div>
+          <a href="https://docs.google.com/spreadsheets/d/1G6DVMS9WX29V0VhMmij-GEedqmhrEVGWz_9KY_coJOY/edit" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shrink-0 text-center">
+            Open Sheet in Drive ↗
+          </a>
+        </div>
+
+        <!-- Option A: Live Webhook URL -->
+        <div class="space-y-2">
+          <label for="inputWebhookUrl" class="block text-xs font-bold text-slate-800 uppercase tracking-wide">
+            Google Apps Script Web App URL (For Automatic 1-Tap Cloud Sync)
+          </label>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input id="inputWebhookUrl" type="url" placeholder="https://script.google.com/macros/s/.../exec" class="flex-1 px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 font-mono focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            <button type="button" id="btnSaveWebhookUrl" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white shrink-0">
+              Save URL
+            </button>
+          </div>
+          <p class="text-[11px] text-slate-500">
+            Once saved, every note you add in this HTML page will automatically append a new row in your Google Sheet.
+          </p>
+        </div>
+
+        <!-- Apps Script Code to Paste in Extensions > Apps Script -->
+        <div class="space-y-2 pt-2 border-t border-slate-200">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-bold text-slate-800 uppercase tracking-wide">1-Minute Apps Script Setup (Paste in Google Sheet → Extensions → Apps Script)</span>
+            <button type="button" id="btnCopyAppsScript" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200">
+              Copy Apps Script Code
+            </button>
+          </div>
+          <ol class="list-decimal pl-5 space-y-1 text-xs text-slate-600">
+            <li>Open your <a href="https://docs.google.com/spreadsheets/d/1G6DVMS9WX29V0VhMmij-GEedqmhrEVGWz_9KY_coJOY/edit" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-semibold underline">India Chem Stall Notes Logbook</a> Google Sheet and click <strong>Extensions → Apps Script</strong>.</li>
+            <li>Paste the script below, click <strong>Deploy → New deployment → Web app</strong> (Execute as: <em>Me</em>, Who has access: <em>Anyone</em>).</li>
+            <li>Paste the resulting <code>/exec</code> URL above and tap <strong>Save URL</strong>.</li>
+          </ol>
+          <pre id="appsScriptCodeBlock" class="text-[11px] font-mono bg-slate-900 text-slate-100 p-3 rounded-xl overflow-x-auto leading-relaxed">const SPREADSHEET_ID = '1G6DVMS9WX29V0VhMmij-GEedqmhrEVGWz_9KY_coJOY';
+
+function doPost(e) {
+  const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const payload = JSON.parse(e.postData.contents);
+  const items = Array.isArray(payload.records) ? payload.records : [payload];
+
+  items.forEach(function(n) {
+    if (n.type === 'castor') {
+      const sheet = ss.getSheetByName('Castor_Stall_Notes') || ss.insertSheet('Castor_Stall_Notes');
+      sheet.appendRow([
+        n.id || '', n.timestamp || '', n.company || '', n.contact || '',
+        n.booth || '', n.location || '', n.sourcing || '',
+        n.prod1 || '', n.spec1 || '', n.prod2 || '', n.spec2 || '',
+        (n.packaging || []).join('; '), n.moq || '', n.capacity || '',
+        n.markets || '', (n.certs || []).join('; '), (n.actions || []).join('; '),
+        n.sampleQty || '', n.extraNotes || ''
+      ]);
+    } else {
+      const sheet = ss.getSheetByName('Petrochem_Pivot_Notes') || ss.insertSheet('Petrochem_Pivot_Notes');
+      sheet.appendRow([
+        n.id || '', n.timestamp || '', n.company || '', n.contact || '',
+        (n.lines || []).join('; '), n.decarb || '', n.biocarbon || '',
+        n.tollCap || '', n.batch || '', n.priceBench || '', n.perfGap || '',
+        n.machVendor || '', n.machSetup || '', n.machCapex || ''
+      ]);
+    }
+  });
+
+  return ContentService.createTextOutput(JSON.stringify({ status: 'ok', count: items.length }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function doGet() {
+  const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const out = [];
+  const cSheet = ss.getSheetByName('Castor_Stall_Notes');
+  if (cSheet && cSheet.getLastRow() > 1) {
+    const rows = cSheet.getRange(2, 1, cSheet.getLastRow() - 1, 19).getValues();
+    rows.forEach(function(r) {
+      out.push({
+        id: String(r[0]), timestamp: String(r[1]), type: 'castor',
+        company: String(r[2]), contact: String(r[3]), booth: String(r[4]),
+        location: String(r[5]), sourcing: String(r[6]), prod1: String(r[7]),
+        spec1: String(r[8]), prod2: String(r[9]), spec2: String(r[10]),
+        packaging: String(r[11]).split('; ').filter(Boolean),
+        moq: String(r[12]), capacity: String(r[13]), markets: String(r[14]),
+        certs: String(r[15]).split('; ').filter(Boolean),
+        actions: String(r[16]).split('; ').filter(Boolean),
+        sampleQty: String(r[17]), extraNotes: String(r[18]), synced: true
+      });
+    });
+  }
+  const pSheet = ss.getSheetByName('Petrochem_Pivot_Notes');
+  if (pSheet && pSheet.getLastRow() > 1) {
+    const rows = pSheet.getRange(2, 1, pSheet.getLastRow() - 1, 14).getValues();
+    rows.forEach(function(r) {
+      out.push({
+        id: String(r[0]), timestamp: String(r[1]), type: 'petro',
+        company: String(r[2]), contact: String(r[3]),
+        lines: String(r[4]).split('; ').filter(Boolean),
+        decarb: String(r[5]), biocarbon: String(r[6]), tollCap: String(r[7]),
+        batch: String(r[8]), priceBench: String(r[9]), perfGap: String(r[10]),
+        machVendor: String(r[11]), machSetup: String(r[12]), machCapex: String(r[13]), synced: true
+      });
+    });
+  }
+  return ContentService.createTextOutput(JSON.stringify({ records: out }))
+    .setMimeType(ContentService.MimeType.JSON);
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Notification -->
   <div id="toastBanner" role="status" aria-live="polite" class="fixed bottom-20 md:bottom-6 right-4 z-50 hidden px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-lg border border-slate-700">
     Saved!
@@ -1143,26 +1348,208 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
 
   <script>
     (function () {
-      const STORAGE_NOTES_KEY = 'indiachem_field_notes_v1';
+      const STORAGE_NOTES_KEY = 'indiachem_field_notes_v2';
       const STORAGE_CHECKS_KEY = 'indiachem_floor_checks_v1';
+      const STORAGE_WEBHOOK_KEY = 'indiachem_sheet_webhook_v1';
 
       let currentTab = 'castor';
       let currentNoteMode = 'castor';
       let currentLogFilter = 'all';
+      let currentDisplayMode = 'cards'; // 'cards' or 'table'
+      let logSearchQuery = '';
+      let sheetWebhookUrl = '';
       let savedNotes = [];
       let checkedItems = {};
+
+      const INITIAL_SHEET_RECORDS = [
+        {
+          id: 'sample_castor_1',
+          type: 'castor',
+          timestamp: '2026-10-23 10:15',
+          company: 'Kutch Speciality Oleochem Pvt Ltd',
+          contact: 'Viral Shah — Export Head',
+          booth: 'Hall 2, Stall C-19',
+          location: 'Gandhidham (Kutch) / FOB Mundra',
+          sourcing: 'Own Crushing Plant (Kutch/Banaskantha/Mehsana)',
+          prod1: '12-Hydroxystearic Acid (12-HSA Flakes)',
+          spec1: 'Acid Val 177, Hydroxyl Val 156, MP 76°C, Gardner < 2',
+          prod2: 'Hydrogenated Castor Oil (HCO / Castor Wax)',
+          spec2: 'MP 86°C, Iodine Val < 3, $1,580/MT FOB Mundra',
+          packaging: ['25 kg / Jumbo Bags (Flakes)', '1 MT IBC Totes', 'Private Label / Neutralization'],
+          moq: '1 MT Trial / 18 MT FCL',
+          capacity: '14 Days / 2,500 MT/month',
+          markets: 'Europe (REACH), US, Japan, Domestic Grease Makers',
+          certs: ['EU REACH Active', 'ISO 9001/14001', 'Kosher / Halal'],
+          actions: ['Request Sample', 'Request Export Price Quotation (FOB Mundra / CIF)'],
+          sampleQty: '1 kg flake pack',
+          extraNotes: 'Physical visiting card stapled; scanned QR for COA & TDS PDF.',
+          synced: true
+        },
+        {
+          id: 'sample_castor_2',
+          type: 'castor',
+          timestamp: '2026-10-23 11:30',
+          company: 'Mehsana Bio-Derivatives & Polymers Ltd',
+          contact: 'Amit Desai — VP Technical Sales',
+          booth: 'Hall 2, Stall D-07',
+          location: 'Mehsana, Gujarat / FOB Mundra & Nhava Sheva',
+          sourcing: 'Own Crushing Plant (Kutch/Banaskantha/Mehsana)',
+          prod1: 'Sebacic Acid (Granular 99.5%) & 2-Octanol',
+          spec1: 'Purity 99.5% min, Ash < 0.03%, Lovibond Color 1.0 Y',
+          prod2: 'Dehydrated Castor Oil (DCO) & Undecylenic Acid',
+          spec2: 'Gardner < 4, Iodine Val 135, $3,150/MT Sebacic FOB',
+          packaging: ['25 kg / Jumbo Bags (Flakes)', '200 kg Steel/HDPE Drums', 'ISO Tank'],
+          moq: '500 kg Trial / 20 MT FCL',
+          capacity: '21 Days / 1,200 MT/month',
+          markets: 'Europe, US, China (PA-11 & Nylon synthesis buyers)',
+          certs: ['EU REACH Active', 'ISO 9001/14001', 'US FDA / DMF', 'GMP'],
+          actions: ['Request Sample', 'Schedule post-event factory visit / technical call'],
+          sampleQty: '500g Sebacic + 250ml DCO',
+          extraNotes: 'Strong 2-octanol byproduct handling; active EU REACH registration confirmed.',
+          synced: true
+        },
+        {
+          id: 'sample_petro_1',
+          type: 'petro',
+          timestamp: '2026-10-23 12:15',
+          company: 'WestCoast Polyurethanes & Ethoxylates Ltd (Hall 1, A-04)',
+          contact: 'Dr. S. Kulkarni — R&D Formulator - Coatings & Resins',
+          lines: ['Polyols/PU', 'Surfactants'],
+          decarb: 'High pressure from EU tier-1 automotive seating buyers for bio-polyol blends',
+          biocarbon: '25% bio-carbon replacement requested',
+          tollCap: 'Yes — spare 10 KL ethoxylation reactor in Dahej for PEG-36/40 Castor Oil job work',
+          batch: '8 MT minimum campaign',
+          priceBench: 'Petro polyether polyol @ $1.85/kg vs Castor Bio-polyol OH# 160',
+          perfGap: 'Castor bio-polyol improves moisture resistance & hydrophobicity in PU coatings',
+          machVendor: 'ProMach Reactor Tech (Hall 4)',
+          machSetup: 'SS316L high-pressure autoclave + vacuum stripping column',
+          machCapex: '₹4.2 Cr for 5-TPD batch line, 5 months lead time',
+          synced: true
+        },
+        {
+          id: 'sample_petro_2',
+          type: 'petro',
+          timestamp: '2026-10-23 14:10',
+          company: 'SynthLube & Esters India Corp (Hall 1, B-22)',
+          contact: 'V. Nair — Sourcing Manager - Bio-based Intermediates',
+          lines: ['Lubricants', 'Resins/Coatings'],
+          decarb: 'Exporting EP greases to EU; replacing mineral base stocks with bio-esters + 12-HSA',
+          biocarbon: '30-40% bio-based content for Ecolabel lubricants',
+          tollCap: 'Esterification reactor spare 60 MT/month in Ankleshwar for castor ester synthesis',
+          batch: '5 MT batch size',
+          priceBench: 'Group III/IV synthetic ester vs HCO/12-HSA thickener @ $1,620/MT',
+          perfGap: 'Requires low iodine value (< 3) and consistent flake mesh size for lithium-complex dropping point',
+          machVendor: 'DistillEx Engineering (Hall 4, P-11)',
+          machSetup: 'Short-path molecular distillation unit (Hastelloy C-276) for methyl ricinoleate',
+          machCapex: '₹5.8 Cr turnkey, 7 months delivery',
+          synced: true
+        }
+      ];
 
       // Safe localStorage helpers
       function loadState() {
         try {
           const rawNotes = localStorage.getItem(STORAGE_NOTES_KEY);
-          if (rawNotes) savedNotes = JSON.parse(rawNotes);
+          if (rawNotes) {
+            savedNotes = JSON.parse(rawNotes);
+          } else {
+            savedNotes = INITIAL_SHEET_RECORDS.slice();
+          }
           const rawChecks = localStorage.getItem(STORAGE_CHECKS_KEY);
           if (rawChecks) checkedItems = JSON.parse(rawChecks);
+          const rawWebhook = localStorage.getItem(STORAGE_WEBHOOK_KEY);
+          if (rawWebhook) sheetWebhookUrl = rawWebhook;
         } catch (err) {
-          savedNotes = [];
+          savedNotes = INITIAL_SHEET_RECORDS.slice();
           checkedItems = {};
         }
+      }
+
+      function updateWebhookStatusUI() {
+        const badge = document.getElementById('sheetConnectionStatusBadge');
+        const dot = document.getElementById('sheetSyncDot');
+        const input = document.getElementById('inputWebhookUrl');
+        if (input && sheetWebhookUrl) input.value = sheetWebhookUrl;
+        if (sheetWebhookUrl) {
+          if (badge) {
+            badge.textContent = 'Webhook Auto-Sync Active';
+            badge.className = 'px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-950 text-emerald-300 border border-emerald-700';
+          }
+          if (dot) dot.className = 'w-2 h-2 rounded-full bg-emerald-400';
+        } else {
+          if (badge) {
+            badge.textContent = 'Direct Paste Ready • Webhook Optional';
+            badge.className = 'px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-amber-300 border border-slate-700';
+          }
+          if (dot) dot.className = 'w-2 h-2 rounded-full bg-amber-400';
+        }
+      }
+
+      function syncRecordsToGoogleSheet(records, silentIfNoWebhook) {
+        if (!records || !records.length) {
+          showToast('No records to sync.');
+          return;
+        }
+        if (!sheetWebhookUrl) {
+          if (!silentIfNoWebhook) {
+            const modal = document.getElementById('modalSheetSetup');
+            if (modal) {
+              modal.classList.remove('hidden');
+              modal.classList.add('flex');
+            }
+            showToast('Copy TSV rows to paste directly, or paste your Apps Script Webhook URL for 1-click cloud sync.');
+          }
+          return;
+        }
+
+        showToast('Syncing ' + records.length + ' record(s) to Google Sheet...');
+        fetch(sheetWebhookUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ records: records })
+        }).then(function () {
+          records.forEach(function (r) { r.synced = true; });
+          saveNotesState();
+          renderSavedNotes();
+          showToast('Synced ' + records.length + ' record(s) to Google Sheet!');
+        }).catch(function () {
+          showToast('Network error syncing to Webhook — record saved locally.');
+        });
+      }
+
+      function pullRecordsFromGoogleSheet() {
+        if (!sheetWebhookUrl) {
+          const modal = document.getElementById('modalSheetSetup');
+          if (modal) {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+          }
+          showToast('Add your Apps Script Web App URL to pull live records from Google Sheets.');
+          return;
+        }
+        showToast('Pulling latest records from Google Sheet...');
+        fetch(sheetWebhookUrl)
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data && Array.isArray(data.records)) {
+              const existingIds = {};
+              savedNotes.forEach(function (n) { existingIds[n.id] = true; });
+              let added = 0;
+              data.records.forEach(function (r) {
+                if (!existingIds[r.id]) {
+                  savedNotes.push(r);
+                  added++;
+                }
+              });
+              saveNotesState();
+              renderSavedNotes();
+              showToast('Pulled ' + data.records.length + ' total record(s) from Google Sheet (' + added + ' new).');
+            }
+          })
+          .catch(function () {
+            showToast('Could not fetch JSON from Web App URL. Verify Anyone access on deployment.');
+          });
       }
 
       function saveNotesState() {
@@ -1423,33 +1810,58 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
 
       function renderSavedNotes() {
         const container = document.getElementById('savedNotesContainer');
-        if (!container) return;
+        const tableContainer = document.getElementById('savedTableContainer');
+        if (!container || !tableContainer) return;
 
         const filtered = savedNotes.filter(function (n) {
-          if (currentLogFilter === 'all') return true;
-          return n.type === currentLogFilter;
+          if (currentLogFilter !== 'all' && n.type !== currentLogFilter) return false;
+          if (logSearchQuery) {
+            const hay = JSON.stringify(n).toLowerCase();
+            if (hay.indexOf(logSearchQuery) === -1) return false;
+          }
+          return true;
         });
 
+        if (currentDisplayMode === 'cards') {
+          container.classList.remove('hidden');
+          tableContainer.classList.add('hidden');
+        } else {
+          container.classList.add('hidden');
+          tableContainer.classList.remove('hidden');
+        }
+
         if (filtered.length === 0) {
-          container.innerHTML = [
+          const emptyHtml = [
             '<div class="p-8 text-center rounded-xl border border-dashed border-slate-300 bg-slate-50">',
-            '  <p class="text-sm font-semibold text-slate-700">No stall notes saved in this view yet.</p>',
+            '  <p class="text-sm font-semibold text-slate-700">No matching stall notes in this view.</p>',
             '  <p class="text-xs text-slate-500 mt-1">Use the "Take Notes" tab to capture Castor Derivative or Petrochemical Pivot stall conversations, or load sample notes above.</p>',
             '</div>'
           ].join('');
+          container.innerHTML = emptyHtml;
+          tableContainer.innerHTML = emptyHtml;
           return;
         }
 
+        // Render Cards View
         container.innerHTML = filtered.map(function (n) {
+          const syncBadge = n.synced
+            ? '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">✓ In Google Sheet</span>'
+            : '<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-100 text-slate-600 border border-slate-300">Local Record</span>';
+
           if (n.type === 'castor') {
             return [
               '<article class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/30 space-y-2">',
               '  <div class="flex flex-wrap items-center justify-between gap-2">',
               '    <div>',
-              '      <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800">Castor Derivative Stall</span>',
+              '      <div class="flex items-center gap-1.5 flex-wrap">',
+              '        <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800">Castor Derivative Stall</span>',
+              '        ' + syncBadge,
+              '        <span class="text-[11px] font-mono text-slate-400">' + escapeHtml(n.timestamp || '') + '</span>',
+              '      </div>',
               '      <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">' + escapeHtml(n.company) + ' <span class="text-xs font-normal text-slate-500">(' + escapeHtml(n.booth || 'No Booth #') + ')</span></h4>',
               '    </div>',
               '    <div class="flex items-center gap-1.5">',
+              '      <button type="button" data-sync-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white">Sync to Sheet</button>',
               '      <button type="button" data-copy-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-100">Copy Text</button>',
               '      <button type="button" data-delete-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-red-50 border border-red-200 text-red-700 hover:bg-red-100">Delete</button>',
               '    </div>',
@@ -1470,10 +1882,15 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
               '<article class="p-4 rounded-xl border border-amber-200 bg-amber-50/30 space-y-2">',
               '  <div class="flex flex-wrap items-center justify-between gap-2">',
               '    <div>',
-              '      <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-amber-100 text-amber-900">Petrochemical Pivot Stall</span>',
+              '      <div class="flex items-center gap-1.5 flex-wrap">',
+              '        <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-amber-100 text-amber-900">Petrochemical Pivot Stall</span>',
+              '        ' + syncBadge,
+              '        <span class="text-[11px] font-mono text-slate-400">' + escapeHtml(n.timestamp || '') + '</span>',
+              '      </div>',
               '      <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">' + escapeHtml(n.company) + ' <span class="text-xs font-normal text-slate-500">(' + escapeHtml((n.lines || []).join(', ') || 'General') + ')</span></h4>',
               '    </div>',
               '    <div class="flex items-center gap-1.5">',
+              '      <button type="button" data-sync-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-white">Sync to Sheet</button>',
               '      <button type="button" data-copy-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-100">Copy Text</button>',
               '      <button type="button" data-delete-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-red-50 border border-red-200 text-red-700 hover:bg-red-100">Delete</button>',
               '    </div>',
@@ -1489,6 +1906,95 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
             ].join('');
           }
         }).join('');
+
+        // Render Spreadsheet Table Inspector View
+        const castorRows = filtered.filter(function (n) { return n.type === 'castor'; });
+        const petroRows = filtered.filter(function (n) { return n.type === 'petro'; });
+        const tablesHtml = [];
+
+        if (castorRows.length > 0) {
+          tablesHtml.push([
+            '<div class="space-y-2">',
+            '  <div class="flex items-center justify-between">',
+            '    <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800">Tab 1: Castor_Stall_Notes (' + castorRows.length + ' records)</h4>',
+            '  </div>',
+            '  <div class="overflow-x-auto rounded-xl border border-slate-200">',
+            '    <table class="min-w-full text-left text-xs border-collapse">',
+            '      <thead class="bg-emerald-900 text-white">',
+            '        <tr>',
+            '          <th class="p-2.5 font-semibold">Status</th>',
+            '          <th class="p-2.5 font-semibold">Company & Booth</th>',
+            '          <th class="p-2.5 font-semibold">Contact & Origin</th>',
+            '          <th class="p-2.5 font-semibold">Integration</th>',
+            '          <th class="p-2.5 font-semibold">Products & Specs</th>',
+            '          <th class="p-2.5 font-semibold">MOQ & Capacity</th>',
+            '          <th class="p-2.5 font-semibold">Certifications</th>',
+            '          <th class="p-2.5 font-semibold">Actions / Notes</th>',
+            '        </tr>',
+            '      </thead>',
+            '      <tbody class="divide-y divide-slate-200 bg-white">',
+            castorRows.map(function (r) {
+              return [
+                '<tr class="hover:bg-emerald-50/40">',
+                '  <td class="p-2.5 whitespace-nowrap">' + (r.synced ? '<span class="text-emerald-700 font-bold">✓ Sheet</span>' : '<span class="text-amber-700">Local</span>') + '</td>',
+                '  <td class="p-2.5 font-semibold text-slate-900">' + escapeHtml(r.company) + '<div class="text-[11px] font-normal text-slate-500">' + escapeHtml(r.booth || '-') + '</div></td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml(r.contact || '-') + '<div class="text-[11px] text-slate-500">' + escapeHtml(r.location || '-') + '</div></td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml(r.sourcing || '-') + '</td>',
+                '  <td class="p-2.5 text-slate-700"><strong>1:</strong> ' + escapeHtml(r.prod1 || '-') + ' (' + escapeHtml(r.spec1 || '-') + ')<br/><strong>2:</strong> ' + escapeHtml(r.prod2 || '-') + ' (' + escapeHtml(r.spec2 || '-') + ')</td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml(r.moq || '-') + '<div class="text-[11px] text-slate-500">' + escapeHtml(r.capacity || '-') + '</div></td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml((r.certs || []).join(', ') || '-') + '</td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml((r.actions || []).join(', ') || '-') + (r.extraNotes ? '<div class="text-[11px] text-slate-500 mt-0.5">' + escapeHtml(r.extraNotes) + '</div>' : '') + '</td>',
+                '</tr>'
+              ].join('');
+            }).join(''),
+            '      </tbody>',
+            '    </table>',
+            '  </div>',
+            '</div>'
+          ].join(''));
+        }
+
+        if (petroRows.length > 0) {
+          tablesHtml.push([
+            '<div class="space-y-2">',
+            '  <div class="flex items-center justify-between">',
+            '    <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800">Tab 2: Petrochem_Pivot_Notes (' + petroRows.length + ' records)</h4>',
+            '  </div>',
+            '  <div class="overflow-x-auto rounded-xl border border-slate-200">',
+            '    <table class="min-w-full text-left text-xs border-collapse">',
+            '      <thead class="bg-amber-900 text-white">',
+            '        <tr>',
+            '          <th class="p-2.5 font-semibold">Status</th>',
+            '          <th class="p-2.5 font-semibold">Company / Booth</th>',
+            '          <th class="p-2.5 font-semibold">Contact & Lines</th>',
+            '          <th class="p-2.5 font-semibold">Bio-Feedstock Appetite</th>',
+            '          <th class="p-2.5 font-semibold">Toll / Contract Capacity</th>',
+            '          <th class="p-2.5 font-semibold">Price Benchmark & Gap</th>',
+            '          <th class="p-2.5 font-semibold">India ProMach Insights</th>',
+            '        </tr>',
+            '      </thead>',
+            '      <tbody class="divide-y divide-slate-200 bg-white">',
+            petroRows.map(function (r) {
+              return [
+                '<tr class="hover:bg-amber-50/40">',
+                '  <td class="p-2.5 whitespace-nowrap">' + (r.synced ? '<span class="text-emerald-700 font-bold">✓ Sheet</span>' : '<span class="text-amber-700">Local</span>') + '</td>',
+                '  <td class="p-2.5 font-semibold text-slate-900">' + escapeHtml(r.company) + '</td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml(r.contact || '-') + '<div class="text-[11px] font-semibold text-amber-800">' + escapeHtml((r.lines || []).join(', ') || '-') + '</div></td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml(r.decarb || '-') + '<div class="text-[11px] text-slate-500">Bio%: ' + escapeHtml(r.biocarbon || '-') + '</div></td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml(r.tollCap || '-') + '<div class="text-[11px] text-slate-500">Min Batch: ' + escapeHtml(r.batch || '-') + '</div></td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml(r.priceBench || '-') + '<div class="text-[11px] text-slate-500">' + escapeHtml(r.perfGap || '-') + '</div></td>',
+                '  <td class="p-2.5 text-slate-700">' + escapeHtml(r.machVendor || '-') + '<div class="text-[11px] text-slate-500">' + escapeHtml(r.machSetup || '-') + ' (' + escapeHtml(r.machCapex || '-') + ')</div></td>',
+                '</tr>'
+              ].join('');
+            }).join(''),
+            '      </tbody>',
+            '    </table>',
+            '  </div>',
+            '</div>'
+          ].join(''));
+        }
+
+        tableContainer.innerHTML = tablesHtml.join('');
       }
 
       function escapeHtml(str) {
@@ -1646,6 +2152,10 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
           e.target.reset();
           showToast('Castor Stall Note saved to Logbook!');
           switchTab('saved');
+          const autoSync = document.getElementById('chkAutoSyncSheet');
+          if (autoSync && autoSync.checked && sheetWebhookUrl) {
+            syncRecordsToGoogleSheet([data], true);
+          }
         });
 
         document.getElementById('btnResetCastorForm').addEventListener('click', function () {
@@ -1671,6 +2181,10 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
           e.target.reset();
           showToast('Petrochemical Pivot Note saved to Logbook!');
           switchTab('saved');
+          const autoSync = document.getElementById('chkAutoSyncSheet');
+          if (autoSync && autoSync.checked && sheetWebhookUrl) {
+            syncRecordsToGoogleSheet([data], true);
+          }
         });
 
         document.getElementById('btnResetPetroForm').addEventListener('click', function () {
@@ -1704,8 +2218,16 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
           });
         });
 
-        // Delegate Copy & Delete inside Saved Notes Container
+        // Delegate Sync, Copy & Delete inside Saved Notes Container
         document.getElementById('savedNotesContainer').addEventListener('click', function (e) {
+          const syncBtn = e.target.closest('[data-sync-note]');
+          if (syncBtn) {
+            const id = syncBtn.getAttribute('data-sync-note');
+            const note = savedNotes.find(function (n) { return n.id === id; });
+            if (note) syncRecordsToGoogleSheet([note], false);
+            return;
+          }
+
           const copyBtn = e.target.closest('[data-copy-note]');
           if (copyBtn) {
             const id = copyBtn.getAttribute('data-copy-note');
@@ -1834,6 +2356,111 @@ Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfact
 
           downloadFile('India_Chem_Stall_Notes.csv', csvContent, 'text/csv;charset=utf-8');
           showToast('Exported .CSV spreadsheet!');
+        });
+
+        // Google Sheets Controls & Inspector Listeners
+        updateWebhookStatusUI();
+
+        const modalSheet = document.getElementById('modalSheetSetup');
+        ['btnOpenSheetSetup', 'btnOpenSheetSetupHeader'].forEach(function (id) {
+          const b = document.getElementById(id);
+          if (b) {
+            b.addEventListener('click', function () {
+              modalSheet.classList.remove('hidden');
+              modalSheet.classList.add('flex');
+            });
+          }
+        });
+        document.getElementById('btnCloseSheetSetup').addEventListener('click', function () {
+          modalSheet.classList.add('hidden');
+          modalSheet.classList.remove('flex');
+        });
+        modalSheet.addEventListener('click', function (e) {
+          if (e.target === modalSheet) {
+            modalSheet.classList.add('hidden');
+            modalSheet.classList.remove('flex');
+          }
+        });
+
+        document.getElementById('btnSaveWebhookUrl').addEventListener('click', function () {
+          const val = document.getElementById('inputWebhookUrl').value.trim();
+          sheetWebhookUrl = val;
+          try {
+            localStorage.setItem(STORAGE_WEBHOOK_KEY, sheetWebhookUrl);
+          } catch (err) {}
+          updateWebhookStatusUI();
+          showToast(sheetWebhookUrl ? 'Google Sheet Webhook URL saved!' : 'Webhook URL cleared.');
+        });
+
+        document.getElementById('btnCopyAppsScript').addEventListener('click', function () {
+          const code = document.getElementById('appsScriptCodeBlock').textContent;
+          copyTextToClipboard(code, 'Google Apps Script copied to clipboard!');
+        });
+
+        document.getElementById('btnSyncAllToSheet').addEventListener('click', function () {
+          syncRecordsToGoogleSheet(savedNotes, false);
+        });
+
+        document.getElementById('btnPullFromSheet').addEventListener('click', function () {
+          pullRecordsFromGoogleSheet();
+        });
+
+        // Copy TSV rows for direct paste into Google Sheets
+        document.getElementById('btnCopyCastorTsv').addEventListener('click', function () {
+          const castor = savedNotes.filter(function (n) { return n.type === 'castor'; });
+          if (!castor.length) {
+            showToast('No Castor stall notes to copy.');
+            return;
+          }
+          const tsv = castor.map(function (n) {
+            return [
+              n.id || '', n.timestamp || '', n.company || '', n.contact || '',
+              n.booth || '', n.location || '', n.sourcing || '',
+              n.prod1 || '', n.spec1 || '', n.prod2 || '', n.spec2 || '',
+              (n.packaging || []).join('; '), n.moq || '', n.capacity || '',
+              n.markets || '', (n.certs || []).join('; '), (n.actions || []).join('; '),
+              n.sampleQty || '', n.extraNotes || ''
+            ].map(function (c) { return String(c).replace(/[\t\r\n]+/g, ' '); }).join('\t');
+          }).join('\n');
+          copyTextToClipboard(tsv, 'Copied ' + castor.length + ' Castor row(s) — paste directly into Castor_Stall_Notes tab!');
+        });
+
+        document.getElementById('btnCopyPetroTsv').addEventListener('click', function () {
+          const petro = savedNotes.filter(function (n) { return n.type === 'petro'; });
+          if (!petro.length) {
+            showToast('No Petrochem Pivot notes to copy.');
+            return;
+          }
+          const tsv = petro.map(function (n) {
+            return [
+              n.id || '', n.timestamp || '', n.company || '', n.contact || '',
+              (n.lines || []).join('; '), n.decarb || '', n.biocarbon || '',
+              n.tollCap || '', n.batch || '', n.priceBench || '', n.perfGap || '',
+              n.machVendor || '', n.machSetup || '', n.machCapex || ''
+            ].map(function (c) { return String(c).replace(/[\t\r\n]+/g, ' '); }).join('\t');
+          }).join('\n');
+          copyTextToClipboard(tsv, 'Copied ' + petro.length + ' Petrochem row(s) — paste directly into Petrochem_Pivot_Notes tab!');
+        });
+
+        // Logbook Search & Cards/Table View Switcher
+        const logSearch = document.getElementById('logSearchInput');
+        if (logSearch) {
+          logSearch.addEventListener('input', function () {
+            logSearchQuery = logSearch.value.trim().toLowerCase();
+            renderSavedNotes();
+          });
+        }
+        document.getElementById('btnDisplayCards').addEventListener('click', function () {
+          currentDisplayMode = 'cards';
+          document.getElementById('btnDisplayCards').className = 'px-2.5 py-1 rounded-md text-xs font-bold bg-white text-slate-900 shadow-xs';
+          document.getElementById('btnDisplayTable').className = 'px-2.5 py-1 rounded-md text-xs font-semibold text-slate-600 hover:text-slate-900';
+          renderSavedNotes();
+        });
+        document.getElementById('btnDisplayTable').addEventListener('click', function () {
+          currentDisplayMode = 'table';
+          document.getElementById('btnDisplayTable').className = 'px-2.5 py-1 rounded-md text-xs font-bold bg-white text-slate-900 shadow-xs';
+          document.getElementById('btnDisplayCards').className = 'px-2.5 py-1 rounded-md text-xs font-semibold text-slate-600 hover:text-slate-900';
+          renderSavedNotes();
         });
 
         // Quick Prompts Modal
