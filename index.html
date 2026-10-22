@@ -1348,6 +1348,13 @@ function doGet() {
 
   <script>
     (function () {
+      // ============================================================================
+      // PERMANENT WEB APP URL CONFIGURATION:
+      // Paste your deployed Google Apps Script '/exec' URL inside the quotes below
+      // to permanently hardcode it into this HTML file across all devices & browsers:
+      // ============================================================================
+      const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxSyDPFE3l3v5wUDKAa1f_mYyuie0G94ZFUJa35d298y5SfEkbONeFxydx0s05h810cpA/exec';
+
       const STORAGE_NOTES_KEY = 'indiachem_field_notes_v2';
       const STORAGE_CHECKS_KEY = 'indiachem_floor_checks_v1';
       const STORAGE_WEBHOOK_KEY = 'indiachem_sheet_webhook_v1';
@@ -1357,7 +1364,7 @@ function doGet() {
       let currentLogFilter = 'all';
       let currentDisplayMode = 'cards'; // 'cards' or 'table'
       let logSearchQuery = '';
-      let sheetWebhookUrl = '';
+      let sheetWebhookUrl = DEFAULT_WEBHOOK_URL;
       let savedNotes = [];
       let checkedItems = {};
 
@@ -1458,7 +1465,11 @@ function doGet() {
           const rawChecks = localStorage.getItem(STORAGE_CHECKS_KEY);
           if (rawChecks) checkedItems = JSON.parse(rawChecks);
           const rawWebhook = localStorage.getItem(STORAGE_WEBHOOK_KEY);
-          if (rawWebhook) sheetWebhookUrl = rawWebhook;
+          if (rawWebhook) {
+            sheetWebhookUrl = rawWebhook;
+          } else if (DEFAULT_WEBHOOK_URL) {
+            sheetWebhookUrl = DEFAULT_WEBHOOK_URL;
+          }
         } catch (err) {
           savedNotes = INITIAL_SHEET_RECORDS.slice();
           checkedItems = {};
