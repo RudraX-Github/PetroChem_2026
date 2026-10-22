@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>India Chem Field Companion — Castor Oil Derivatives &amp; Petrochem Pivot Guide</title>
+  <meta name="description" content="Mobile-friendly exhibition field guide and interactive stall note-taking logbook for Castor Oil Derivatives and Petrochemical Pivot strategies at India Chem &amp; India ProMach." />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b'
+            },
+            petro: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen pb-24 md:pb-12">
+
+  <!-- Sticky Top App Bar -->
+  <header class="sticky top-0 z-30 bg-slate-900 text-white shadow-md border-b border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5 min-w-0">
+        <div class="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center shrink-0 text-emerald-300 font-bold text-sm">
+          IC
+        </div>
+        <div class="truncate">
+          <div class="flex items-center gap-2">
+            <h1 class="font-bold text-base sm:text-lg tracking-tight truncate">India Chem Field Guide</h1>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+              85–90% Global Castor Share
+            </span>
+          </div>
+          <p class="text-xs text-slate-400 truncate">Castor Derivatives &amp; Petrochem Pivot Companion</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 shrink-0">
+        <button id="btnOpenQuickPrompts" type="button" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+          <span>Ask Prompts</span>
+        </button>
+        <button id="btnJumpNewNote" type="button" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+          <span>Take Note</span>
+          <span id="headerSavedBadge" class="ml-0.5 px-1.5 py-0.2 bg-emerald-800 text-emerald-100 rounded-full text-[11px]">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Desktop / Tablet Segmented Navigation -->
+    <nav aria-label="Main sections" class="max-w-5xl mx-auto px-4 pt-1 pb-2 hidden md:flex items-center gap-2">
+      <button type="button" data-nav="castor" class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition bg-emerald-600 text-white">
+        1. Castor Derivatives Guide
+      </button>
+      <button type="button" data-nav="petro" class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition text-slate-300 hover:bg-slate-800">
+        2. Petrochemical Pivot Strategy
+      </button>
+      <button type="button" data-nav="notes" class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition text-slate-300 hover:bg-slate-800">
+        3. Interactive Notes &amp; Checklists
+      </button>
+      <button type="button" data-nav="saved" class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition text-slate-300 hover:bg-slate-800 flex items-center gap-1.5">
+        <span>4. Saved Stall Logbook</span>
+        <span id="desktopSavedCount" class="px-1.5 py-0.5 rounded-full bg-slate-700 text-slate-200 text-[10px]">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-5xl mx-auto px-4 pt-4 space-y-6">
+
+    <!-- Global Search & Executive Context Banner -->
+    <section class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
+            Exhibition Floor Strategy
+          </span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mt-1.5">
+            Castor Oil Derivatives &amp; Petrochemical Co-Formulation
+          </h2>
+        </div>
+        <div class="relative w-full sm:w-72">
+          <input id="globalSearchInput" type="search" placeholder="Filter products, specs, questions..." aria-label="Filter guide content" class="w-full pl-9 pr-8 py-2 text-sm bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition" />
+          <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <button id="btnClearSearch" type="button" class="hidden absolute right-2.5 top-2 text-slate-400 hover:text-slate-600 text-xs font-bold px-1 py-0.5" aria-label="Clear search">✕</button>
+        </div>
+      </div>
+
+      <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
+        <strong>Market Position:</strong> India commands <strong>~85–90% of global castor seed production</strong>, yet true margin stability lies downstream in value-added derivatives rather than commercial crude oil. Even if the floor leans toward petrochemical giants, castor derivatives connect directly via <strong>functional substitution</strong> (bio-based vs. fossil feedstocks) and <strong>co-formulation</strong> (polyols, plasticizers, and cross-linkers).
+      </p>
+
+      <!-- Progress Tracker Bar -->
+      <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2">
+          <span class="font-semibold text-slate-700">Floor Readiness Checklist:</span>
+          <span id="checklistProgressText" class="font-mono font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">0 / 16 items checked</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnSwitchToCastorNote" type="button" class="px-2.5 py-1.5 rounded-lg font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 transition">
+            + Castor Stall Note
+          </button>
+          <button id="btnSwitchToPetroNote" type="button" class="px-2.5 py-1.5 rounded-lg font-semibold bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-200 transition">
+            + Petrochem Pivot Note
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 1: CASTOR OIL DERIVATIVES GUIDE
+         ========================================== -->
+    <div id="view-castor" class="space-y-6">
+
+      <!-- Section 1: Key Value Chains to Map at the Stalls -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden searchable-block">
+        <div class="p-4 sm:p-5 bg-gradient-to-r from-emerald-900 to-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-300">Part 1 • Section 1</span>
+            <h3 class="text-base sm:text-lg font-bold mt-0.5">1. Key Value Chains to Map at the Stalls</h3>
+            <p class="text-xs text-slate-300 mt-0.5">Identify which value tier exhibitors specialize in and where your entry point fits best.</p>
+          </div>
+          <!-- Tier Filter Pills -->
+          <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
+            <button type="button" data-tier="all" class="tier-filter-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-500 text-white shrink-0">All 4 Tiers</button>
+            <button type="button" data-tier="tier1" class="tier-filter-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 shrink-0">1st Gen</button>
+            <button type="button" data-tier="tier2" class="tier-filter-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 shrink-0">Hydrogenated</button>
+            <button type="button" data-tier="tier3" class="tier-filter-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 shrink-0">Specialty</button>
+            <button type="button" data-tier="tier4" class="tier-filter-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 shrink-0">Bio-Polymers</button>
+          </div>
+        </div>
+
+        <!-- Mobile-Friendly Cards (and Desktop Grid) for Value Tiers -->
+        <div class="p-4 sm:p-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Tier 1 -->
+          <article data-tier-card="tier1" class="tier-card rounded-xl border border-slate-200 bg-slate-50/70 p-4 flex flex-col justify-between searchable-item">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-slate-200 text-slate-800">Tier 1 • Volume / Base</span>
+                <span class="text-xs font-mono text-slate-500">Standard Grades</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">First-Generation / Standard</h4>
+              <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+                <div>
+                  <span class="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Derivative Products:</span>
+                  <p class="text-slate-800 font-medium mt-0.5">Commercial Grade (BSS), Refined Castor Oil (FSG), Pale Pressed Grade (PPG)</p>
+                </div>
+                <div>
+                  <span class="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Core End-Use Industries:</span>
+                  <p class="text-slate-600 mt-0.5">Paints, lubricants, basic pharma</p>
+                </div>
+                <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                  <span class="font-bold text-emerald-800 block text-xs uppercase tracking-wide">Key Notes to Take:</span>
+                  <p class="text-slate-700 mt-0.5">Base crushing capacity, bulk delivery terms, price benchmarks per MT.</p>
+                </div>
+              </div>
+            </div>
+            <button type="button" data-prefill-castor="First-Generation (BSS / FSG / PPG)" class="mt-3 w-full py-2 px-3 rounded-lg text-xs font-semibold bg-white hover:bg-emerald-50 text-emerald-700 border border-emerald-200 transition flex items-center justify-center gap-1.5">
+              <span>Log Stall in This Tier</span>
+              <span>→</span>
+            </button>
+          </article>
+
+          <!-- Tier 2 -->
+          <article data-tier-card="tier2" class="tier-card rounded-xl border border-slate-200 bg-slate-50/70 p-4 flex flex-col justify-between searchable-item">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-emerald-100 text-emerald-800">Tier 2 • Core Derivatives</span>
+                <span class="text-xs font-mono text-slate-500">Flakes / Powders</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">Hydrogenated &amp; Fatty Acids</h4>
+              <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+                <div>
+                  <span class="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Derivative Products:</span>
+                  <p class="text-slate-800 font-medium mt-0.5">Hydrogenated Castor Oil (HCO / Castor Wax), 12-Hydroxystearic Acid (12-HSA), Ricinoleic Acid</p>
+                </div>
+                <div>
+                  <span class="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Core End-Use Industries:</span>
+                  <p class="text-slate-600 mt-0.5">Lithium multipurpose greases, cosmetics, rubber, hot-melt adhesives</p>
+                </div>
+                <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                  <span class="font-bold text-emerald-800 block text-xs uppercase tracking-wide">Key Notes to Take:</span>
+                  <p class="text-slate-700 mt-0.5">Melting point specs, acid value, flake/powder mesh size, packaging stability.</p>
+                </div>
+              </div>
+            </div>
+            <button type="button" data-prefill-castor="Hydrogenated & Fatty Acids (HCO / 12-HSA / Ricinoleic)" class="mt-3 w-full py-2 px-3 rounded-lg text-xs font-semibold bg-white hover:bg-emerald-50 text-emerald-700 border border-emerald-200 transition flex items-center justify-center gap-1.5">
+              <span>Log Stall in This Tier</span>
+              <span>→</span>
+            </button>
+          </article>
+
+          <!-- Tier 3 -->
+          <article data-tier-card="tier3" class="tier-card rounded-xl border border-slate-200 bg-slate-50/70 p-4 flex flex-col justify-between searchable-item">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-teal-100 text-teal-800">Tier 3 • Pyrolysis / Cracking</span>
+                <span class="text-xs font-mono text-slate-500">High-Spec Industrial</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">Specialty / Industrial</h4>
+              <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+                <div>
+                  <span class="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Derivative Products:</span>
+                  <p class="text-slate-800 font-medium mt-0.5">Dehydrated Castor Oil (DCO), Blown Oil, Sebacic Acid, Undecylenic Acid, Heptaldehyde</p>
+                </div>
+                <div>
+                  <span class="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Core End-Use Industries:</span>
+                  <p class="text-slate-600 mt-0.5">Alkyd resins, high-performance coatings, aviation greases, nylon synthesis</p>
+                </div>
+                <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                  <span class="font-bold text-emerald-800 block text-xs uppercase tracking-wide">Key Notes to Take:</span>
+                  <p class="text-slate-700 mt-0.5">Purity levels, color Gardner index, drying time, byproduct handling (e.g., 2-octanol yields).</p>
+                </div>
+              </div>
+            </div>
+            <button type="button" data-prefill-castor="Specialty / Industrial (DCO / Sebacic / Undecylenic)" class="mt-3 w-full py-2 px-3 rounded-lg text-xs font-semibold bg-white hover:bg-emerald-50 text-emerald-700 border border-emerald-200 transition flex items-center justify-center gap-1.5">
+              <span>Log Stall in This Tier</span>
+              <span>→</span>
+            </button>
+          </article>
+
+          <!-- Tier 4 -->
+          <article data-tier-card="tier4" class="tier-card rounded-xl border border-slate-200 bg-slate-50/70 p-4 flex flex-col justify-between searchable-item">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-100 text-indigo-800">Tier 4 • Advanced Downstream</span>
+                <span class="text-xs font-mono text-slate-500">High Margin</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">High-Margin / Bio-based Polymers</h4>
+              <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+                <div>
+                  <span class="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Derivative Products:</span>
+                  <p class="text-slate-800 font-medium mt-0.5">Polyamide 11 (PA-11), Bio-polyols, Ester quats, Ethoxylated Castor Oil (PEG-EL series)</p>
+                </div>
+                <div>
+                  <span class="font-semibold text-slate-700 block text-xs uppercase tracking-wide">Core End-Use Industries:</span>
+                  <p class="text-slate-600 mt-0.5">Automotive light-weighting, 3D printing filaments, polyurethane foams, textile surfactants</p>
+                </div>
+                <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+                  <span class="font-bold text-emerald-800 block text-xs uppercase tracking-wide">Key Notes to Take:</span>
+                  <p class="text-slate-700 mt-0.5">Technical data sheets (TDS), regulatory compatibility (REACH, FDA, ISO).</p>
+                </div>
+              </div>
+            </div>
+            <button type="button" data-prefill-castor="High-Margin Bio-Polymers (PA-11 / Bio-polyols / PEG-EL)" class="mt-3 w-full py-2 px-3 rounded-lg text-xs font-semibold bg-white hover:bg-emerald-50 text-emerald-700 border border-emerald-200 transition flex items-center justify-center gap-1.5">
+              <span>Log Stall in This Tier</span>
+              <span>→</span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 2: What to Ask Manufacturers & Traders (Vendor/Competitor Intelligence) -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 searchable-block">
+        <div class="border-b border-slate-100 pb-3 mb-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Part 1 • Section 2</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-0.5">2. What to Ask Manufacturers &amp; Traders (Vendor / Competitor Intelligence)</h3>
+          <p class="text-xs text-slate-500 mt-0.5">Tap checkboxes as you verify operational details with technical sales managers and business heads.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Sourcing & Backward Integration -->
+          <div class="rounded-xl border border-slate-200 p-4 bg-slate-50/50 searchable-item">
+            <h4 class="font-bold text-sm text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold flex items-center justify-center">A</span>
+              Sourcing &amp; Backward Integration
+            </h4>
+            <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+              <label class="flex items-start gap-2.5 cursor-pointer">
+                <input type="checkbox" data-track-check="q1" class="mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500" />
+                <span class="text-slate-700">Do they have their own crushing plants in Gujarat (<strong>Kutch, Banaskantha, Mehsana belt</strong>), or purchase crude castor oil from external crushers?</span>
+              </label>
+              <label class="flex items-start gap-2.5 cursor-pointer">
+                <input type="checkbox" data-track-check="q2" class="mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500" />
+                <span class="text-slate-700">What are their <strong>MOQ (Minimum Order Quantity)</strong> terms for trial batches vs. regular container loads?</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Purity & Technical Specifications -->
+          <div class="rounded-xl border border-slate-200 p-4 bg-slate-50/50 searchable-item">
+            <h4 class="font-bold text-sm text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold flex items-center justify-center">B</span>
+              Purity &amp; Technical Specifications
+            </h4>
+            <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+              <label class="flex items-start gap-2.5 cursor-pointer">
+                <input type="checkbox" data-track-check="q3" class="mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500" />
+                <span class="text-slate-700">Collect hard copies or scan QR codes for <strong>Technical Data Sheets (TDS)</strong> and <strong>Certificates of Analysis (COA)</strong>.</span>
+              </label>
+              <label class="flex items-start gap-2.5 cursor-pointer">
+                <input type="checkbox" data-track-check="q4" class="mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500" />
+                <span class="text-slate-700">Note key parameters: <strong>Acid Value, Iodine Value, Hydroxyl Value, Moisture content, and Color standards (Gardner / Lovibond)</strong>.</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Packaging & Export Readiness -->
+          <div class="rounded-xl border border-slate-200 p-4 bg-slate-50/50 searchable-item">
+            <h4 class="font-bold text-sm text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold flex items-center justify-center">C</span>
+              Packaging &amp; Export Readiness
+            </h4>
+            <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+              <label class="flex items-start gap-2.5 cursor-pointer">
+                <input type="checkbox" data-track-check="q5" class="mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500" />
+                <span class="text-slate-700">What packaging formats do they supply? (<strong>200 kg steel drums, 1 MT IBC totes, ISO tanks, or 20–24 MT flexitanks</strong>).</span>
+              </label>
+              <label class="flex items-start gap-2.5 cursor-pointer">
+                <input type="checkbox" data-track-check="q6" class="mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500" />
+                <span class="text-slate-700">Do they provide <strong>customized packaging, private labeling, or neutralization</strong> for overseas shipments?</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Certifications & Compliance -->
+          <div class="rounded-xl border border-slate-200 p-4 bg-slate-50/50 searchable-item">
+            <h4 class="font-bold text-sm text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold flex items-center justify-center">D</span>
+              Certifications &amp; Compliance
+            </h4>
+            <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+              <label class="flex items-start gap-2.5 cursor-pointer">
+                <input type="checkbox" data-track-check="q7" class="mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500" />
+                <span class="text-slate-700">Verify compliance accreditations: <strong>EU REACH, US FDA / DMF</strong> (for pharma grade), <strong>Halal / Kosher, and ISO 9001 / 14001</strong>.</span>
+              </label>
+              <label class="flex items-start gap-2.5 cursor-pointer">
+                <input type="checkbox" data-track-check="q8" class="mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500" />
+                <span class="text-slate-700">Ask if they hold <strong>active REACH registrations for Europe</strong> (major barrier to entry and export value-driver).</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Downstream Buyers & Application Segments to Look For -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 searchable-block">
+        <div class="border-b border-slate-100 pb-3 mb-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Part 1 • Section 3</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-0.5">3. Downstream Buyers &amp; Application Segments to Scout</h3>
+          <p class="text-xs text-slate-500 mt-0.5">Visit exhibitors representing industries that consume castor derivatives to understand buyer demand specs.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm">
+          <div class="p-3.5 rounded-xl border border-slate-200 bg-white searchable-item">
+            <span class="inline-block px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold text-xs mb-1.5">Lubricants &amp; Grease Formulators</span>
+            <p class="text-slate-700"><strong>Castor wax (HCO) and 12-HSA</strong> are core thickening agents in lithium and lithium-complex greases. Ask what <strong>viscosity and consistency requirements</strong> they look for in suppliers.</p>
+          </div>
+          <div class="p-3.5 rounded-xl border border-slate-200 bg-white searchable-item">
+            <span class="inline-block px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold text-xs mb-1.5">Personal Care, Cosmetics &amp; Pharma</span>
+            <p class="text-slate-700"><strong>High-purity PEG castor oil, cold-pressed castor oil, and esters</strong> are used in lipsticks, skin emulsions, and injectable drug delivery systems. Note their <strong>solvent residue limits and microbiological standards</strong>.</p>
+          </div>
+          <div class="p-3.5 rounded-xl border border-slate-200 bg-white searchable-item">
+            <span class="inline-block px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold text-xs mb-1.5">Paints, Coatings &amp; Inks</span>
+            <p class="text-slate-700">Inquire about their demand for <strong>Dehydrated Castor Oil (DCO) fatty acids</strong> as non-yellowing alkyd drying agents.</p>
+          </div>
+          <div class="p-3.5 rounded-xl border border-slate-200 bg-white searchable-item">
+            <span class="inline-block px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold text-xs mb-1.5">Agrochemicals &amp; Surfactants</span>
+            <p class="text-slate-700"><strong>Castor ethoxylates</strong> act as emulsifiers in crop protection formulations. Note the <strong>ethylene oxide (EO) mole ratios (e.g., 30, 36, 40, 54 moles)</strong> most in demand.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 & Pro-Tips -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Section 4: Machinery & Technology Section (India ProMach) -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 searchable-block">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Part 1 • Section 4</span>
+          <h3 class="text-base font-bold text-slate-900 mt-0.5">4. Machinery &amp; Technology (India ProMach)</h3>
+          <p class="text-xs text-slate-500 mt-0.5 mb-3">Concurrent process machinery expo checks for derivative processing:</p>
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 searchable-item">
+              <h4 class="font-bold text-slate-900">Reaction &amp; Processing Hardware</h4>
+              <p class="text-slate-600 mt-1">Inspect <strong>hydrogenation reactors, pressure autoclaves, vacuum distillation columns, and flaker machines</strong> (for 12-HSA and HCO flakes). Ask about metallurgy requirements (<strong>SS316L or Hastelloy</strong> for acidic fatty acid reactions).</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 searchable-item">
+              <h4 class="font-bold text-slate-900">Automation &amp; Quality Control Instrumentation</h4>
+              <p class="text-slate-600 mt-1">Check benchtop lab instruments: <strong>automated titrators, Gas Chromatography (GC-MS)</strong> for fatty acid methyl ester (FAME) profiling, and <strong>spectrophotometers</strong> for Lovibond color measurement.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pro-Tips for Maximizing the Expo -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 searchable-block">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Execution Tactics</span>
+          <h3 class="text-base font-bold text-slate-900 mt-0.5">Pro-Tips for Maximizing the Expo</h3>
+          <p class="text-xs text-slate-500 mt-0.5 mb-3">Check off your daily floor habits:</p>
+          <div class="space-y-2.5 text-xs sm:text-sm">
+            <label class="flex items-start gap-2.5 p-2.5 rounded-xl bg-emerald-50/50 border border-emerald-100 cursor-pointer searchable-item">
+              <input type="checkbox" data-track-check="tip1" class="mt-0.5 w-4 h-4 rounded text-emerald-600" />
+              <span class="text-slate-700"><strong>Exchange Visiting Cards Digitally &amp; Physically:</strong> Staple their physical card directly next to handwritten notes immediately after leaving the stall so contacts never mix up.</span>
+            </label>
+            <label class="flex items-start gap-2.5 p-2.5 rounded-xl bg-emerald-50/50 border border-emerald-100 cursor-pointer searchable-item">
+              <input type="checkbox" data-track-check="tip2" class="mt-0.5 w-4 h-4 rounded text-emerald-600" />
+              <span class="text-slate-700"><strong>Scan Stall Catalogues via QR:</strong> Save QR PDFs directly into a dedicated phone or Drive folder labeled with the booth name.</span>
+            </label>
+            <label class="flex items-start gap-2.5 p-2.5 rounded-xl bg-emerald-50/50 border border-emerald-100 cursor-pointer searchable-item">
+              <input type="checkbox" data-track-check="tip3" class="mt-0.5 w-4 h-4 rounded text-emerald-600" />
+              <span class="text-slate-700"><strong>Attend Technical Sessions:</strong> Target panels on <strong>Bio-based Chemicals, Specialty Oleochemicals, or Green Solvents</strong> to hear supply chain leaders discuss demand forecasts and bottlenecks.</span>
+            </label>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         VIEW 2: PETROCHEMICAL PIVOT STRATEGY
+         ========================================== -->
+    <div id="view-petro" class="space-y-6 hidden">
+
+      <!-- Petrochem Strategic Header -->
+      <section class="bg-gradient-to-br from-amber-900 via-slate-900 to-slate-900 text-white rounded-2xl p-4 sm:p-5 shadow-sm">
+        <span class="inline-block px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-400/30">
+          Part 2 • Zero Dedicated Castor Stalls? Pivot Strategy
+        </span>
+        <h3 class="text-lg sm:text-xl font-bold mt-1.5">Turning a Petrochemical-Heavy Expo into Your Advantage</h3>
+        <p class="text-xs sm:text-sm text-slate-300 mt-1.5 leading-relaxed">
+          Petrochemicals and castor oil derivatives are directly intertwined through <strong>1) Functional Substitution</strong> (bio-based vs. fossil feedstocks) and <strong>2) Co-Formulation</strong> (petrochemical resins requiring castor plasticizers, polyols, or cross-linkers). Use this playbook when surrounded by polymer and petrochemical booths.
+        </p>
+      </section>
+
+      <!-- 1. Re-frame Petrochemical Stalls as Target Customers & Competitors -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 searchable-block">
+        <div class="border-b border-slate-100 pb-3 mb-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber-700">Part 2 • Section 1</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-0.5">1. Re-frame Petrochemical Stalls as Your Target Customers &amp; Competitors</h3>
+          <p class="text-xs text-slate-500 mt-0.5">Target these 4 specific petrochemical downstream booths and ask the exact transition questions below.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Card 1: PU & Polyols -->
+          <article class="rounded-xl border border-amber-200 bg-amber-50/40 p-4 flex flex-col justify-between searchable-item">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2.5 py-0.5 rounded text-xs font-bold bg-amber-100 text-amber-900">Polyols / PU</span>
+                <span class="text-xs font-semibold text-amber-800">Bio-Polyol Link</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">Polyurethane (PU) &amp; Polyol Manufacturers</h4>
+              <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+                <p class="text-slate-700"><strong>The Link:</strong> Conventional PU uses petrochemical polyols derived from propylene oxide/petroleum. Castor oil is the only natural, commercially abundant bio-polyol (containing natural hydroxyl groups).</p>
+                <div class="p-2.5 rounded-lg bg-white border border-amber-200">
+                  <span class="text-[11px] font-bold uppercase text-amber-800 block">What to Ask:</span>
+                  <p class="text-slate-900 font-medium italic mt-0.5">"Are your clients demanding bio-based polyurethane or ESG-compliant polyols for automotive seating/insulation foams?"</p>
+                </div>
+                <p class="text-slate-700"><strong>What to Note:</strong> Benchmark petrochemical polyol prices, hydroxyl values, and whether they have evaluated blending castor-based polyols.</p>
+              </div>
+            </div>
+            <button type="button" data-prefill-petro="Polyols/PU" class="mt-3 w-full py-2 px-3 rounded-lg text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-white transition">
+              Start Pivot Note for PU / Polyol Stall →
+            </button>
+          </article>
+
+          <!-- Card 2: Specialty Polymers & Nylon -->
+          <article class="rounded-xl border border-amber-200 bg-amber-50/40 p-4 flex flex-col justify-between searchable-item">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2.5 py-0.5 rounded text-xs font-bold bg-amber-100 text-amber-900">Resins / Engineering Plastics</span>
+                <span class="text-xs font-semibold text-amber-800">PA-11 Link</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">Specialty Polymers &amp; Nylon/Polyamide Compounds</h4>
+              <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+                <p class="text-slate-700"><strong>The Link:</strong> Standard Polyamide 6 and 6,6 are pure petrochemicals. Polyamide 11 (PA-11) is 100% bio-based, derived directly from 11-aminoundecanoic acid (from castor).</p>
+                <div class="p-2.5 rounded-lg bg-white border border-amber-200">
+                  <span class="text-[11px] font-bold uppercase text-amber-800 block">What to Ask:</span>
+                  <p class="text-slate-900 font-medium italic mt-0.5">"Do you supply bio-polyamides or bio-based engineering plastics? What grade specs are your compounder clients asking for?"</p>
+                </div>
+                <p class="text-slate-700"><strong>What to Note:</strong> Grade specifications, compounder demand, heat/flexibility performance gaps vs. PA-6/6,6.</p>
+              </div>
+            </div>
+            <button type="button" data-prefill-petro="Resins/Coatings" class="mt-3 w-full py-2 px-3 rounded-lg text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-white transition">
+              Start Pivot Note for Polymer / Resin Stall →
+            </button>
+          </article>
+
+          <!-- Card 3: Synthetic Lubricants -->
+          <article class="rounded-xl border border-amber-200 bg-amber-50/40 p-4 flex flex-col justify-between searchable-item">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2.5 py-0.5 rounded text-xs font-bold bg-amber-100 text-amber-900">Lubricants &amp; Base-Stocks</span>
+                <span class="text-xs font-semibold text-amber-800">HCO &amp; 12-HSA Link</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">Synthetic Lubricant &amp; Grease Base-Stock Producers</h4>
+              <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+                <p class="text-slate-700"><strong>The Link:</strong> Synthetic esters and Group III/IV mineral oils compete with or formulate alongside Hydrogenated Castor Oil (Castor Wax) and 12-HSA thickeners.</p>
+                <div class="p-2.5 rounded-lg bg-white border border-amber-200">
+                  <span class="text-[11px] font-bold uppercase text-amber-800 block">What to Ask:</span>
+                  <p class="text-slate-900 font-medium italic mt-0.5">"Which thickeners and bio-lubricant base oils are you pairing with your synthetic esters for extreme-pressure (EP) industrial greases?"</p>
+                </div>
+                <p class="text-slate-700"><strong>What to Note:</strong> Thickener pairing specs, extreme-pressure formulation needs, bio-lubricant blending appetite.</p>
+              </div>
+            </div>
+            <button type="button" data-prefill-petro="Lubricants" class="mt-3 w-full py-2 px-3 rounded-lg text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-white transition">
+              Start Pivot Note for Lubricant Stall →
+            </button>
+          </article>
+
+          <!-- Card 4: Surfactants & Ethoxylates -->
+          <article class="rounded-xl border border-amber-200 bg-amber-50/40 p-4 flex flex-col justify-between searchable-item">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="px-2.5 py-0.5 rounded text-xs font-bold bg-amber-100 text-amber-900">Surfactants / EO Reactors</span>
+                <span class="text-xs font-semibold text-amber-800">Toll Ethoxylation Link</span>
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">Surfactant &amp; Ethoxylate Manufacturers</h4>
+              <div class="mt-3 space-y-2.5 text-xs sm:text-sm">
+                <p class="text-slate-700"><strong>The Link:</strong> Many petrochemical ethoxylators react ethylene oxide (EO) with nonylphenol or fatty alcohols. The same reactors can make Ethoxylated Castor Oil (PEG-EL series) for agrochemical and cosmetic emulsifiers.</p>
+                <div class="p-2.5 rounded-lg bg-white border border-amber-200">
+                  <span class="text-[11px] font-bold uppercase text-amber-800 block">What to Ask:</span>
+                  <p class="text-slate-900 font-medium italic mt-0.5">"Do you do toll manufacturing/contract ethoxylation for natural oil fatty chains or vegetable oils like castor?"</p>
+                </div>
+                <p class="text-slate-700"><strong>What to Note:</strong> Spare EO reactor capacity, minimum batch size for job work, agro/cosmetic emulsifier capabilities.</p>
+              </div>
+            </div>
+            <button type="button" data-prefill-petro="Surfactants" class="mt-3 w-full py-2 px-3 rounded-lg text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-white transition">
+              Start Pivot Note for Surfactant Stall →
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2. Hunt for Hidden Oleochemical Delegates & 3. Exploit India ProMach -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 searchable-block">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber-700">Part 2 • Section 2</span>
+          <h3 class="text-base font-bold text-slate-900 mt-0.5">2. Hunt for "Hidden" Oleochemical Delegates</h3>
+          <p class="text-xs text-slate-500 mt-0.5 mb-3">Even if pure-play crushers (e.g., Jayant Agro, Adani Wilmar, Gokul Overseas) aren't exhibiting large booths, their R&amp;D, procurement, and sales leaders walk the floor:</p>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 searchable-item">
+              <h4 class="font-bold text-slate-900">Visit Export &amp; Trade Association Pavilions</h4>
+              <p class="text-slate-700 mt-1">Head to <strong>CHEMEXCIL</strong> (Basic Chemicals, Cosmetics &amp; Dyes Export Promotion Council) and <strong>FICCI / Trade Information desks</strong>.</p>
+              <label class="flex items-start gap-2 mt-2 cursor-pointer">
+                <input type="checkbox" data-track-check="p_chemexcil" class="mt-0.5 w-4 h-4 rounded text-amber-600" />
+                <span class="text-slate-800 font-medium">Request latest export directory/trade data booklet for <strong>Chapter 15 &amp; Chapter 29</strong> (Castor Oil &amp; Derivatives) and ask which export clusters see top growth (US, EU REACH, China).</span>
+              </label>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 searchable-item">
+              <h4 class="font-bold text-slate-900">Network at Conference &amp; Coffee Lounges</h4>
+              <p class="text-slate-700 mt-1">Scan attendee badges in lounges, food courts, and session rooms for these exact titles:</p>
+              <div class="mt-2 flex flex-wrap gap-1.5">
+                <span class="px-2 py-1 rounded bg-amber-100 text-amber-900 font-semibold text-xs">Sourcing Manager - Bio-based Intermediates</span>
+                <span class="px-2 py-1 rounded bg-amber-100 text-amber-900 font-semibold text-xs">R&amp;D Formulator - Coatings &amp; Resins</span>
+                <span class="px-2 py-1 rounded bg-amber-100 text-amber-900 font-semibold text-xs">Procurement Head - Oleochemicals</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 searchable-block">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber-700">Part 2 • Section 3</span>
+          <h3 class="text-base font-bold text-slate-900 mt-0.5">3. Exploit India ProMach Machinery Intel</h3>
+          <p class="text-xs text-slate-500 mt-0.5 mb-3">Equipment fabricators are an open secret source of competitor expansion intelligence:</p>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 searchable-item">
+              <h4 class="font-bold text-slate-900">Hydrogenation &amp; High-Pressure Reactor Fabricators</h4>
+              <p class="text-slate-700 mt-1 italic">"Have you installed batch hydrogenation loops or flaking units for fatty acids like 12-HSA or castor wax in Gujarat or Maharashtra recently?"</p>
+              <label class="flex items-start gap-2 mt-2 cursor-pointer">
+                <input type="checkbox" data-track-check="p_reactor" class="mt-0.5 w-4 h-4 rounded text-amber-600" />
+                <span class="text-slate-700">Note which factories are expanding capacity, standard metallurgy (<strong>SS316L vs. Hastelloy</strong>), and capex for a <strong>5-TPD derivative line</strong>.</span>
+              </label>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 searchable-item">
+              <h4 class="font-bold text-slate-900">Vacuum &amp; Molecular Distillation Vendors</h4>
+              <p class="text-slate-700 mt-1">Essential for high-purity <strong>methyl ricinoleate, sebacic acid, or undecylenic acid</strong>.</p>
+              <label class="flex items-start gap-2 mt-2 cursor-pointer">
+                <input type="checkbox" data-track-check="p_distill" class="mt-0.5 w-4 h-4 rounded text-amber-600" />
+                <span class="text-slate-700">Collect brochures and record <strong>utility consumption per metric ton</strong>.</span>
+              </label>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         VIEW 3: INTERACTIVE NOTES & CHECKLISTS (BOTH TEMPLATES)
+         ========================================== -->
+    <div id="view-notes" class="space-y-6 hidden">
+
+      <!-- Mode Selector Header -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Interactive Stall Capture</span>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-0.5">What to Write Down — Exhibition Notes Checklists</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Switch between the Castor Oil Derivatives Template and the Petrochemical Pivot Checklist, or view Plaintext Templates.</p>
+          </div>
+          <!-- Template Switcher Buttons -->
+          <div class="inline-flex rounded-xl p-1 bg-slate-100 border border-slate-200 self-start">
+            <button type="button" id="btnModeCastor" class="px-3 py-1.5 rounded-lg text-xs font-bold transition bg-emerald-600 text-white shadow-sm">
+              Castor Derivatives Form
+            </button>
+            <button type="button" id="btnModePetro" class="px-3 py-1.5 rounded-lg text-xs font-bold transition text-slate-700 hover:text-slate-900">
+              Petrochem Pivot Form
+            </button>
+            <button type="button" id="btnModePlaintext" class="px-3 py-1.5 rounded-lg text-xs font-bold transition text-slate-700 hover:text-slate-900">
+              Raw Templates
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORM A: CASTOR OIL & DERIVATIVES STALL NOTE TEMPLATE -->
+      <form id="formCastorNote" class="bg-white rounded-2xl shadow-sm border border-emerald-200 overflow-hidden">
+        <div class="p-4 sm:p-5 bg-emerald-900 text-white flex items-center justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-300">Template 1 • Castor Processor / Trader</span>
+            <h4 class="text-base sm:text-lg font-bold">Castor Oil &amp; Derivatives Stall Checklist</h4>
+          </div>
+          <button type="button" id="btnResetCastorForm" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-800 hover:bg-emerald-700 text-emerald-100 border border-emerald-700">
+            Clear Form
+          </button>
+        </div>
+
+        <div class="p-4 sm:p-5 space-y-5">
+          <!-- Basic Stall Identity -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div>
+              <label for="c_company" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1">Company Name *</label>
+              <input id="c_company" type="text" required placeholder="e.g., Gujarat Oleochem Pvt Ltd" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+            <div>
+              <label for="c_contact" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1">Contact Person &amp; Role</label>
+              <input id="c_contact" type="text" placeholder="e.g., Rajesh Patel — VP Exports / Tech Sales" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+            <div>
+              <label for="c_booth" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1">Booth No. &amp; Hall</label>
+              <input id="c_booth" type="text" placeholder="e.g., Hall 2, Booth B-14" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+            <div>
+              <label for="c_location" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1">Factory Location / Port of Exit</label>
+              <input id="c_location" type="text" placeholder="e.g., Gandhidham / Kutch — FOB Mundra" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+          </div>
+
+          <!-- Sourcing & Backward Integration Quick Toggle -->
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="block text-xs font-bold text-slate-800 uppercase tracking-wide mb-2">Backward Integration &amp; Crushing Source</span>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-300 cursor-pointer">
+                <input type="radio" name="c_sourcing" value="Own Crushing Plant (Kutch/Banaskantha/Mehsana)" class="text-emerald-600" checked />
+                <span>Own Crushing Plant (Gujarat Belt)</span>
+              </label>
+              <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-300 cursor-pointer">
+                <input type="radio" name="c_sourcing" value="Buys Crude Castor Oil Externally" class="text-emerald-600" />
+                <span>Buys Crude Castor Externally</span>
+              </label>
+              <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-300 cursor-pointer">
+                <input type="radio" name="c_sourcing" value="Merchant Exporter / Trader" class="text-emerald-600" />
+                <span>Merchant Exporter / Trader</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Core Derivative Products -->
+          <div class="space-y-3 pt-2 border-t border-slate-100">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-emerald-800">Core Derivative Products &amp; Technical Specs</h5>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 rounded-xl bg-emerald-50/40 border border-emerald-100">
+              <div>
+                <label for="c_prod1" class="block text-xs font-semibold text-slate-700 mb-1">1. Primary Product / Tier</label>
+                <input id="c_prod1" type="text" placeholder="e.g., 12-HSA Flakes / Sebacic Acid / FSG" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              </div>
+              <div>
+                <label for="c_spec1" class="block text-xs font-semibold text-slate-700 mb-1">Specs (Purity, Hydroxyl/Acid/Iodine Val, Color)</label>
+                <input id="c_spec1" type="text" placeholder="e.g., Acid Val 175-185, Gardner < 2, Moisture < 0.5%" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              </div>
+              <div>
+                <label for="c_prod2" class="block text-xs font-semibold text-slate-700 mb-1">2. Secondary Product / Grade</label>
+                <input id="c_prod2" type="text" placeholder="e.g., HCO (Castor Wax) / DCO / PEG-40" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              </div>
+              <div>
+                <label for="c_spec2" class="block text-xs font-semibold text-slate-700 mb-1">Secondary Specs / Price Benchmark per MT</label>
+                <input id="c_spec2" type="text" placeholder="e.g., MP 85°C, Flake mesh size, $1,650/MT FOB" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              </div>
+            </div>
+
+            <!-- Packaging Checkboxes -->
+            <div>
+              <span class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Packaging Formats &amp; Export Readiness</span>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_pack" value="200 kg Steel/HDPE Drums" class="w-4 h-4 rounded text-emerald-600" />
+                  <span>200 kg Drums</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_pack" value="1 MT IBC Totes" class="w-4 h-4 rounded text-emerald-600" />
+                  <span>1 MT IBC Totes</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_pack" value="20-24 MT Flexitank" class="w-4 h-4 rounded text-emerald-600" />
+                  <span>20–24 MT Flexitank</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_pack" value="ISO Tank" class="w-4 h-4 rounded text-emerald-600" />
+                  <span>ISO Tank</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_pack" value="25 kg / Jumbo Bags (Flakes)" class="w-4 h-4 rounded text-emerald-600" />
+                  <span>25 kg / Jumbo Bags</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_pack" value="Private Label / Neutralization" class="w-4 h-4 rounded text-emerald-600" />
+                  <span>Private Label / Neutral</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Commercial Details -->
+          <div class="space-y-3 pt-2 border-t border-slate-100">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-emerald-800">Commercial Details &amp; Certifications</h5>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label for="c_moq" class="block text-xs font-semibold text-slate-700 mb-1">MOQ (Trial vs. FCL)</label>
+                <input id="c_moq" type="text" placeholder="e.g., 1 MT trial / 20 MT FCL" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300" />
+              </div>
+              <div>
+                <label for="c_capacity" class="block text-xs font-semibold text-slate-700 mb-1">Lead Time / Capacity</label>
+                <input id="c_capacity" type="text" placeholder="e.g., 15 days / 3,000 MT/month" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300" />
+              </div>
+              <div>
+                <label for="c_markets" class="block text-xs font-semibold text-slate-700 mb-1">Target Markets</label>
+                <input id="c_markets" type="text" placeholder="e.g., Europe, US, China, SEA, Domestic" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300" />
+              </div>
+            </div>
+
+            <!-- Certifications Available -->
+            <div>
+              <span class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Certifications Available</span>
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_cert" value="EU REACH Active" class="w-4 h-4 rounded text-emerald-600" />
+                  <span class="font-semibold">EU REACH</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_cert" value="ISO 9001/14001" class="w-4 h-4 rounded text-emerald-600" />
+                  <span class="font-semibold">ISO 9001/14001</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_cert" value="Kosher / Halal" class="w-4 h-4 rounded text-emerald-600" />
+                  <span class="font-semibold">Kosher / Halal</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_cert" value="GMP" class="w-4 h-4 rounded text-emerald-600" />
+                  <span class="font-semibold">GMP</span>
+                </label>
+                <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" name="c_cert" value="US FDA / DMF" class="w-4 h-4 rounded text-emerald-600" />
+                  <span class="font-semibold">US FDA / DMF</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Follow-up Actions -->
+          <div class="space-y-3 pt-2 border-t border-slate-100">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-emerald-800">Follow-up Actions</h5>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                <input type="checkbox" id="c_act_sample" name="c_action" value="Request Sample" class="w-4 h-4 rounded text-emerald-600" />
+                <span>Request Sample</span>
+              </label>
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                <input type="checkbox" name="c_action" value="Request Export Price Quotation (FOB Mundra / CIF)" class="w-4 h-4 rounded text-emerald-600" />
+                <span>Request Export Quote (FOB Mundra / CIF)</span>
+              </label>
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                <input type="checkbox" name="c_action" value="Schedule post-event factory visit / technical call" class="w-4 h-4 rounded text-emerald-600" />
+                <span>Schedule Factory Visit / Tech Call</span>
+              </label>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label for="c_sample_qty" class="block text-xs font-semibold text-slate-700 mb-1">Sample Qty Needed</label>
+                <input id="c_sample_qty" type="text" placeholder="e.g., 500g / 1 kg lab sample" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300" />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="c_extra_notes" class="block text-xs font-semibold text-slate-700 mb-1">Additional Floor Observations / Card Stapled / QR Scanned</label>
+                <input id="c_extra_notes" type="text" placeholder="e.g., TDS QR scanned, strong 2-octanol yield, open to tolling..." class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-2 flex flex-col sm:flex-row gap-2.5">
+            <button type="submit" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm transition">
+              Save Castor Stall Note to Logbook
+            </button>
+            <button type="button" id="btnCopyDraftCastor" class="py-3 px-4 rounded-xl font-semibold text-sm bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 transition">
+              Copy Formatted Text
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- FORM B: PETROCHEMICAL & POLYMER PIVOT CHECKLIST FORM -->
+      <form id="formPetroNote" class="bg-white rounded-2xl shadow-sm border border-amber-200 overflow-hidden hidden">
+        <div class="p-4 sm:p-5 bg-amber-900 text-white flex items-center justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-300">Template 2 • Petrochem / Machinery Pivot</span>
+            <h4 class="text-base sm:text-lg font-bold">Petrochemical &amp; Polymer Pivot Notes Checklist</h4>
+          </div>
+          <button type="button" id="btnResetPetroForm" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-800 hover:bg-amber-700 text-amber-100 border border-amber-700">
+            Clear Form
+          </button>
+        </div>
+
+        <div class="p-4 sm:p-5 space-y-5">
+          <!-- Company / Booth & Petrochem Line -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div>
+              <label for="p_company" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1">Company / Booth No. *</label>
+              <input id="p_company" type="text" required placeholder="e.g., RelPolyester / Hall 1 Booth A-08" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500" />
+            </div>
+            <div>
+              <label for="p_contact" class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1">Contact Person &amp; Badge Title</label>
+              <input id="p_contact" type="text" placeholder="e.g., R&D Formulator - Coatings & Resins" class="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500" />
+            </div>
+          </div>
+
+          <div>
+            <span class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Petrochem Line (Select all that apply)</span>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-amber-200 bg-amber-50/50 cursor-pointer">
+                <input type="checkbox" name="p_line" value="Polyols/PU" class="w-4 h-4 rounded text-amber-600" />
+                <span class="font-semibold">Polyols / PU</span>
+              </label>
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-amber-200 bg-amber-50/50 cursor-pointer">
+                <input type="checkbox" name="p_line" value="Resins/Coatings" class="w-4 h-4 rounded text-amber-600" />
+                <span class="font-semibold">Resins / Coatings</span>
+              </label>
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-amber-200 bg-amber-50/50 cursor-pointer">
+                <input type="checkbox" name="p_line" value="Lubricants" class="w-4 h-4 rounded text-amber-600" />
+                <span class="font-semibold">Lubricants</span>
+              </label>
+              <label class="flex items-center gap-2 p-2.5 rounded-lg border border-amber-200 bg-amber-50/50 cursor-pointer">
+                <input type="checkbox" name="p_line" value="Surfactants" class="w-4 h-4 rounded text-amber-600" />
+                <span class="font-semibold">Surfactants</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 1. Bio-Feedstock Appetite -->
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-amber-800">1. Bio-Feedstock Appetite</h5>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="p_decarb" class="block text-xs font-semibold text-slate-700 mb-1">Export Decarbonization / REACH Pressure to Blend Bio-Materials?</label>
+                <input id="p_decarb" type="text" placeholder="e.g., Yes — EU automotive OEMs asking for ESG polyols" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white" />
+              </div>
+              <div>
+                <label for="p_biocarbon" class="block text-xs font-semibold text-slate-700 mb-1">Replacement or Bio-Carbon % Requested by EU/US Buyers</label>
+                <input id="p_biocarbon" type="text" placeholder="e.g., 20–35% bio-carbon content target by 2027" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Toll / Contract Manufacturing Potential -->
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-amber-800">2. Toll / Contract Manufacturing Potential</h5>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="p_toll_cap" class="block text-xs font-semibold text-slate-700 mb-1">Spare Reaction Capacity (Esterification, Ethoxylation, Sulfonation)?</label>
+                <input id="p_toll_cap" type="text" placeholder="e.g., Spare EO reactor in Dahej available for job work" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white" />
+              </div>
+              <div>
+                <label for="p_batch" class="block text-xs font-semibold text-slate-700 mb-1">Minimum Batch Size for Toll Synthesis</label>
+                <input id="p_batch" type="text" placeholder="e.g., 5 MT per batch / 15 MT campaign" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Competitive Benchmark -->
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-amber-800">3. Competitive Benchmark</h5>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="p_price_bench" class="block text-xs font-semibold text-slate-700 mb-1">Competing Petrochemical Equivalent Price Point</label>
+                <input id="p_price_bench" type="text" placeholder="e.g., Adipic acid vs. Sebacic acid price / PO polyol $/kg" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white" />
+              </div>
+              <div>
+                <label for="p_perf_gap" class="block text-xs font-semibold text-slate-700 mb-1">Performance Gap (Heat Resistance, Flexibility, Biodegradability)</label>
+                <input id="p_perf_gap" type="text" placeholder="e.g., Castor polyol gives superior hydrophobicity & flexibility" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Machinery Insights (India ProMach) -->
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-amber-800">4. Machinery Insights (India ProMach)</h5>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label for="p_mach_vendor" class="block text-xs font-semibold text-slate-700 mb-1">Vendor Name</label>
+                <input id="p_mach_vendor" type="text" placeholder="e.g., HighPress Autoclaves Ltd" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white" />
+              </div>
+              <div>
+                <label for="p_mach_setup" class="block text-xs font-semibold text-slate-700 mb-1">Recommended Setup (Splitting / Flaking / Hydrogenation)</label>
+                <input id="p_mach_setup" type="text" placeholder="e.g., SS316L loop reactor + chilled drum flaker" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white" />
+              </div>
+              <div>
+                <label for="p_mach_capex" class="block text-xs font-semibold text-slate-700 mb-1">Estimated Capex &amp; Lead Time</label>
+                <input id="p_mach_capex" type="text" placeholder="e.g., ₹4.5 Cr for 5 TPD line, 6 mos delivery" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-300 bg-white" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-2 flex flex-col sm:flex-row gap-2.5">
+            <button type="submit" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm bg-amber-600 hover:bg-amber-500 text-white shadow-sm transition">
+              Save Petrochem Pivot Note to Logbook
+            </button>
+            <button type="button" id="btnCopyDraftPetro" class="py-3 px-4 rounded-xl font-semibold text-sm bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 transition">
+              Copy Formatted Text
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- VIEW C: RAW PLAINTEXT TEMPLATES FOR QUICK COPY -->
+      <div id="boxPlaintextTemplates" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+        <!-- Castor Plaintext Template -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Template 1 • Castor Stalls</span>
+              <button type="button" data-copy-target="rawCastorText" class="copy-raw-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200">
+                Copy Template
+              </button>
+            </div>
+            <pre id="rawCastorText" class="text-xs font-mono bg-slate-900 text-slate-100 p-3.5 rounded-xl overflow-x-auto leading-relaxed">Company Name:
+Contact Person &amp; Role:
+Booth No. &amp; Hall:
+Factory Location / Port of Exit:
+
+Core Derivative Products:
+1. Product: ______________ | Specs: (Purity, Hydroxyl/Acid Val): _________
+2. Product: ______________ | Packaging: [Drums / IBC / Flexitank]
+
+Commercial Details:
+- Minimum Order Quantity (MOQ):
+- Lead Time / Production Capacity:
+- Target Markets (Domestic vs. Export: Europe / US / China / SEA):
+- Certifications Available: [ ] REACH  [ ] ISO  [ ] Kosher/Halal  [ ] GMP
+
+Follow-up Action:
+[ ] Request Sample (Qty: ____)
+[ ] Request Export Price Quotation (FOB Mundra / CIF)
+[ ] Schedule post-event factory visit / technical call</pre>
+          </div>
+        </div>
+
+        <!-- Petrochemical Plaintext Template -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Template 2 • Petrochem Pivot</span>
+              <button type="button" data-copy-target="rawPetroText" class="copy-raw-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-200">
+                Copy Template
+              </button>
+            </div>
+            <pre id="rawPetroText" class="text-xs font-mono bg-slate-900 text-slate-100 p-3.5 rounded-xl overflow-x-auto leading-relaxed">Company / Booth: _____________________________________________
+Petrochem Line: [ ] Polyols/PU  [ ] Resins/Coatings  [ ] Lubricants  [ ] Surfactants
+
+1. Bio-Feedstock Appetite:
+   - Does this company face export decarbonization/REACH pressure to blend bio-based raw materials?
+   - What replacement or bio-carbon % are their EU/US buyers requesting?
+
+2. Toll / Contract Manufacturing Potential:
+   - Do they have spare reaction capacity (esterification, ethoxylation, sulfonation) to process castor oil intermediates on job work?
+   - Minimum batch size for toll synthesis: _______
+
+3. Competitive Benchmark:
+   - What is the price point of the competing petrochemical equivalent?
+     (e.g., Petrochemical Sebacic/Adipic acid price vs. bio-based dicarboxylic acid)
+   - What performance gap exists? (e.g., heat resistance, flexibility, biodegradability)
+
+4. Machinery Insights (India ProMach):
+   - Vendor Name: ________________
+   - Recommended setup for fatty acid splitting / flaking / hydrogenation:
+   - Estimated Capex &amp; Lead Time:</pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==========================================
+         VIEW 4: SAVED STALL LOGBOOK & EXPORT
+         ========================================== -->
+    <div id="view-saved" class="space-y-4 hidden">
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Captured Exhibition Intelligence</span>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-0.5">Saved Stall Notes Logbook</h3>
+            <p class="text-xs text-slate-500 mt-0.5">All notes are stored locally on your device. Export as TXT/CSV or copy individual stall cards.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <button type="button" id="btnLoadSampleNotes" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition">
+              + Load Example Notes
+            </button>
+            <button type="button" id="btnExportTxt" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 transition">
+              Export .TXT Report
+            </button>
+            <button type="button" id="btnExportCsv" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-white transition">
+              Export .CSV
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Saved Notes -->
+        <div class="flex items-center gap-2 pt-3">
+          <button type="button" data-log-filter="all" class="log-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-900 text-white">All Notes</button>
+          <button type="button" data-log-filter="castor" class="log-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700">Castor Stalls</button>
+          <button type="button" data-log-filter="petro" class="log-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700">Petrochem Pivot</button>
+        </div>
+
+        <div id="savedNotesContainer" class="mt-4 space-y-3"></div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav aria-label="Mobile bottom navigation" class="md:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t border-slate-200 shadow-lg grid grid-cols-4 py-1.5 px-2 no-print">
+    <button type="button" data-nav="castor" class="nav-tab-btn flex flex-col items-center justify-center py-1 rounded-xl text-emerald-700 font-bold text-[11px]">
+      <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+      <span>Castor Guide</span>
+    </button>
+    <button type="button" data-nav="petro" class="nav-tab-btn flex flex-col items-center justify-center py-1 rounded-xl text-slate-500 font-medium text-[11px]">
+      <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      <span>Petro Pivot</span>
+    </button>
+    <button type="button" data-nav="notes" class="nav-tab-btn flex flex-col items-center justify-center py-1 rounded-xl text-slate-500 font-medium text-[11px]">
+      <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+      <span>Take Notes</span>
+    </button>
+    <button type="button" data-nav="saved" class="nav-tab-btn flex flex-col items-center justify-center py-1 rounded-xl text-slate-500 font-medium text-[11px] relative">
+      <svg class="w-5 h-5 mb-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+      <span>Logbook</span>
+      <span id="mobileSavedCount" class="absolute top-0.5 right-4 px-1.5 py-0.2 rounded-full bg-emerald-600 text-white text-[10px] font-bold">0</span>
+    </button>
+  </nav>
+
+  <!-- Quick Ask Prompts Drawer Modal -->
+  <div id="modalQuickPrompts" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs hidden items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white w-full max-w-lg rounded-t-2xl sm:rounded-2xl shadow-xl border border-slate-200 max-h-[85vh] flex flex-col overflow-hidden">
+      <div class="p-4 bg-slate-900 text-white flex items-center justify-between">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Stall Conversation Cheat Sheet</span>
+          <h3 class="text-base font-bold">Rapid-Fire Questions to Ask</h3>
+        </div>
+        <button type="button" id="btnCloseQuickPrompts" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center font-bold">✕</button>
+      </div>
+      <div class="p-4 overflow-y-auto space-y-4 text-xs sm:text-sm">
+        <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+          <span class="font-bold text-emerald-900 block mb-1">For Castor Processors &amp; Traders:</span>
+          <ul class="list-disc pl-4 space-y-1 text-slate-800">
+            <li>"Do you have your own crushing plant in Kutch/Banaskantha/Mehsana, or buy crude castor externally?"</li>
+            <li>"What is your trial batch MOQ vs. full container load (FCL) pricing?"</li>
+            <li>"Do you hold active EU REACH registration, US FDA/DMF, and Kosher/Halal certificates?"</li>
+            <li>"Can you supply in 1 MT IBC totes or 24 MT flexitanks with private/neutral labeling?"</li>
+          </ul>
+        </div>
+        <div class="p-3 rounded-xl bg-amber-50 border border-amber-200">
+          <span class="font-bold text-amber-900 block mb-1">For Petrochemical &amp; Polymer Stalls (Pivot):</span>
+          <ul class="list-disc pl-4 space-y-1 text-slate-800">
+            <li><strong>PU / Polyols:</strong> "Are your clients demanding bio-based polyurethane or ESG-compliant polyols for automotive seating/insulation foams?"</li>
+            <li><strong>Nylon / Compounds:</strong> "Do you supply bio-polyamides (PA-11) or bio-based engineering plastics? What grade specs are compounders asking for?"</li>
+            <li><strong>Synthetic Lubes:</strong> "Which thickeners (12-HSA / Castor Wax) and bio-lubricant base oils are you pairing with synthetic esters for EP greases?"</li>
+            <li><strong>Surfactants:</strong> "Do you do toll manufacturing/contract ethoxylation for natural oil fatty chains or castor oil?"</li>
+          </ul>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-100 border border-slate-200">
+          <span class="font-bold text-slate-900 block mb-1">For India ProMach Equipment Vendors:</span>
+          <ul class="list-disc pl-4 space-y-1 text-slate-700">
+            <li>"Have you installed batch hydrogenation loops or flaking units for 12-HSA or castor wax in Gujarat or Maharashtra recently?"</li>
+            <li>"What metallurgy (SS316L vs. Hastelloy) and capex are required for a 5-TPD derivative line?"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastBanner" role="status" aria-live="polite" class="fixed bottom-20 md:bottom-6 right-4 z-50 hidden px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-lg border border-slate-700">
+    Saved!
+  </div>
+
+  <script>
+    (function () {
+      const STORAGE_NOTES_KEY = 'indiachem_field_notes_v1';
+      const STORAGE_CHECKS_KEY = 'indiachem_floor_checks_v1';
+
+      let currentTab = 'castor';
+      let currentNoteMode = 'castor';
+      let currentLogFilter = 'all';
+      let savedNotes = [];
+      let checkedItems = {};
+
+      // Safe localStorage helpers
+      function loadState() {
+        try {
+          const rawNotes = localStorage.getItem(STORAGE_NOTES_KEY);
+          if (rawNotes) savedNotes = JSON.parse(rawNotes);
+          const rawChecks = localStorage.getItem(STORAGE_CHECKS_KEY);
+          if (rawChecks) checkedItems = JSON.parse(rawChecks);
+        } catch (err) {
+          savedNotes = [];
+          checkedItems = {};
+        }
+      }
+
+      function saveNotesState() {
+        try {
+          localStorage.setItem(STORAGE_NOTES_KEY, JSON.stringify(savedNotes));
+        } catch (err) {
+          // Fallback to in-memory state
+        }
+        updateSavedBadges();
+      }
+
+      function saveChecksState() {
+        try {
+          localStorage.setItem(STORAGE_CHECKS_KEY, JSON.stringify(checkedItems));
+        } catch (err) {
+          // Fallback to in-memory state
+        }
+        updateChecklistProgress();
+      }
+
+      function showToast(msg) {
+        const toast = document.getElementById('toastBanner');
+        if (!toast) return;
+        toast.textContent = msg;
+        toast.classList.remove('hidden');
+        clearTimeout(window.__toastTimer);
+        window.__toastTimer = setTimeout(function () {
+          toast.classList.add('hidden');
+        }, 2600);
+      }
+
+      function copyTextToClipboard(text, label) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () {
+            showToast(label || 'Copied to clipboard!');
+          }).catch(function () {
+            fallbackCopy(text, label);
+          });
+        } else {
+          fallbackCopy(text, label);
+        }
+      }
+
+      function fallbackCopy(text, label) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+          showToast(label || 'Copied to clipboard!');
+        } catch (err) {
+          showToast('Copy failed — please select and copy manually.');
+        }
+        document.body.removeChild(ta);
+      }
+
+      // Navigation Switching
+      function switchTab(tabName) {
+        currentTab = tabName;
+        const views = ['castor', 'petro', 'notes', 'saved'];
+        views.forEach(function (v) {
+          const el = document.getElementById('view-' + v);
+          if (el) {
+            if (v === tabName) el.classList.remove('hidden');
+            else el.classList.add('hidden');
+          }
+        });
+
+        // Update nav buttons
+        document.querySelectorAll('.nav-tab-btn').forEach(function (btn) {
+          const target = btn.getAttribute('data-nav');
+          const isMobile = btn.closest('nav').classList.contains('md:hidden');
+          if (target === tabName) {
+            if (isMobile) {
+              btn.classList.add('text-emerald-700', 'font-bold');
+              btn.classList.remove('text-slate-500', 'font-medium');
+            } else {
+              btn.classList.add('bg-emerald-600', 'text-white');
+              btn.classList.remove('text-slate-300', 'hover:bg-slate-800');
+            }
+          } else {
+            if (isMobile) {
+              btn.classList.remove('text-emerald-700', 'font-bold');
+              btn.classList.add('text-slate-500', 'font-medium');
+            } else {
+              btn.classList.remove('bg-emerald-600', 'text-white');
+              btn.classList.add('text-slate-300', 'hover:bg-slate-800');
+            }
+          }
+        });
+
+        if (tabName === 'saved') {
+          renderSavedNotes();
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Note Form Mode Switching (Castor vs Petro vs Plaintext)
+      function switchNoteMode(mode) {
+        currentNoteMode = mode;
+        const formCastor = document.getElementById('formCastorNote');
+        const formPetro = document.getElementById('formPetroNote');
+        const boxRaw = document.getElementById('boxPlaintextTemplates');
+        const btnC = document.getElementById('btnModeCastor');
+        const btnP = document.getElementById('btnModePetro');
+        const btnR = document.getElementById('btnModePlaintext');
+
+        formCastor.classList.add('hidden');
+        formPetro.classList.add('hidden');
+        boxRaw.classList.add('hidden');
+
+        btnC.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition text-slate-700 hover:text-slate-900';
+        btnP.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition text-slate-700 hover:text-slate-900';
+        btnR.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition text-slate-700 hover:text-slate-900';
+
+        if (mode === 'castor') {
+          formCastor.classList.remove('hidden');
+          btnC.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition bg-emerald-600 text-white shadow-sm';
+        } else if (mode === 'petro') {
+          formPetro.classList.remove('hidden');
+          btnP.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition bg-amber-600 text-white shadow-sm';
+        } else {
+          boxRaw.classList.remove('hidden');
+          btnR.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition bg-slate-900 text-white shadow-sm';
+        }
+      }
+
+      // Format Castor Note as Plaintext
+      function formatCastorNoteText(note) {
+        return [
+          '=== CASTOR DERIVATIVES STALL NOTE ===',
+          'Company Name: ' + (note.company || '-'),
+          'Contact Person & Role: ' + (note.contact || '-'),
+          'Booth No. & Hall: ' + (note.booth || '-'),
+          'Factory Location / Port of Exit: ' + (note.location || '-'),
+          'Backward Integration: ' + (note.sourcing || '-'),
+          '',
+          'Core Derivative Products:',
+          '1. Product: ' + (note.prod1 || '-') + ' | Specs: ' + (note.spec1 || '-'),
+          '2. Product: ' + (note.prod2 || '-') + ' | Specs/Price: ' + (note.spec2 || '-'),
+          'Packaging: ' + ((note.packaging && note.packaging.length) ? note.packaging.join(', ') : '-'),
+          '',
+          'Commercial Details:',
+          '- Minimum Order Quantity (MOQ): ' + (note.moq || '-'),
+          '- Lead Time / Production Capacity: ' + (note.capacity || '-'),
+          '- Target Markets: ' + (note.markets || '-'),
+          '- Certifications Available: ' + ((note.certs && note.certs.length) ? note.certs.join(', ') : 'None noted'),
+          '',
+          'Follow-up Action:',
+          '- Actions: ' + ((note.actions && note.actions.length) ? note.actions.join(', ') : 'None selected'),
+          '- Sample Qty: ' + (note.sampleQty || '-'),
+          '- Extra Notes: ' + (note.extraNotes || '-')
+        ].join('\n');
+      }
+
+      // Format Petro Note as Plaintext
+      function formatPetroNoteText(note) {
+        return [
+          '=== PETROCHEMICAL PIVOT STALL NOTE ===',
+          'Company / Booth: ' + (note.company || '-'),
+          'Contact & Role: ' + (note.contact || '-'),
+          'Petrochem Line: ' + ((note.lines && note.lines.length) ? note.lines.join(', ') : '-'),
+          '',
+          '1. Bio-Feedstock Appetite:',
+          '   - Export decarbonization/REACH pressure: ' + (note.decarb || '-'),
+          '   - Replacement or bio-carbon % requested: ' + (note.biocarbon || '-'),
+          '',
+          '2. Toll / Contract Manufacturing Potential:',
+          '   - Spare reaction capacity (esterification/ethoxylation/sulfonation): ' + (note.tollCap || '-'),
+          '   - Minimum batch size for toll synthesis: ' + (note.batch || '-'),
+          '',
+          '3. Competitive Benchmark:',
+          '   - Competing petrochemical price point: ' + (note.priceBench || '-'),
+          '   - Performance gap: ' + (note.perfGap || '-'),
+          '',
+          '4. Machinery Insights (India ProMach):',
+          '   - Vendor Name: ' + (note.machVendor || '-'),
+          '   - Recommended setup: ' + (note.machSetup || '-'),
+          '   - Estimated Capex & Lead Time: ' + (note.machCapex || '-')
+        ].join('\n');
+      }
+
+      function collectCastorFormData() {
+        const sourcingEl = document.querySelector('input[name="c_sourcing"]:checked');
+        const packEls = Array.from(document.querySelectorAll('input[name="c_pack"]:checked')).map(function (e) { return e.value; });
+        const certEls = Array.from(document.querySelectorAll('input[name="c_cert"]:checked')).map(function (e) { return e.value; });
+        const actEls = Array.from(document.querySelectorAll('input[name="c_action"]:checked')).map(function (e) { return e.value; });
+
+        return {
+          id: 'note_' + Date.now(),
+          type: 'castor',
+          timestamp: new Date().toLocaleString(),
+          company: document.getElementById('c_company').value.trim(),
+          contact: document.getElementById('c_contact').value.trim(),
+          booth: document.getElementById('c_booth').value.trim(),
+          location: document.getElementById('c_location').value.trim(),
+          sourcing: sourcingEl ? sourcingEl.value : '',
+          prod1: document.getElementById('c_prod1').value.trim(),
+          spec1: document.getElementById('c_spec1').value.trim(),
+          prod2: document.getElementById('c_prod2').value.trim(),
+          spec2: document.getElementById('c_spec2').value.trim(),
+          packaging: packEls,
+          moq: document.getElementById('c_moq').value.trim(),
+          capacity: document.getElementById('c_capacity').value.trim(),
+          markets: document.getElementById('c_markets').value.trim(),
+          certs: certEls,
+          actions: actEls,
+          sampleQty: document.getElementById('c_sample_qty').value.trim(),
+          extraNotes: document.getElementById('c_extra_notes').value.trim()
+        };
+      }
+
+      function collectPetroFormData() {
+        const lineEls = Array.from(document.querySelectorAll('input[name="p_line"]:checked')).map(function (e) { return e.value; });
+        return {
+          id: 'note_' + Date.now(),
+          type: 'petro',
+          timestamp: new Date().toLocaleString(),
+          company: document.getElementById('p_company').value.trim(),
+          contact: document.getElementById('p_contact').value.trim(),
+          lines: lineEls,
+          decarb: document.getElementById('p_decarb').value.trim(),
+          biocarbon: document.getElementById('p_biocarbon').value.trim(),
+          tollCap: document.getElementById('p_toll_cap').value.trim(),
+          batch: document.getElementById('p_batch').value.trim(),
+          priceBench: document.getElementById('p_price_bench').value.trim(),
+          perfGap: document.getElementById('p_perf_gap').value.trim(),
+          machVendor: document.getElementById('p_mach_vendor').value.trim(),
+          machSetup: document.getElementById('p_mach_setup').value.trim(),
+          machCapex: document.getElementById('p_mach_capex').value.trim()
+        };
+      }
+
+      function updateSavedBadges() {
+        const count = savedNotes.length;
+        ['headerSavedBadge', 'desktopSavedCount', 'mobileSavedCount'].forEach(function (id) {
+          const el = document.getElementById(id);
+          if (el) el.textContent = String(count);
+        });
+      }
+
+      function updateChecklistProgress() {
+        const checkboxes = document.querySelectorAll('input[data-track-check]');
+        let checkedCount = 0;
+        checkboxes.forEach(function (cb) {
+          const key = cb.getAttribute('data-track-check');
+          cb.checked = !!checkedItems[key];
+          if (cb.checked) checkedCount++;
+        });
+        const badge = document.getElementById('checklistProgressText');
+        if (badge) {
+          badge.textContent = checkedCount + ' / ' + checkboxes.length + ' items checked';
+        }
+      }
+
+      function renderSavedNotes() {
+        const container = document.getElementById('savedNotesContainer');
+        if (!container) return;
+
+        const filtered = savedNotes.filter(function (n) {
+          if (currentLogFilter === 'all') return true;
+          return n.type === currentLogFilter;
+        });
+
+        if (filtered.length === 0) {
+          container.innerHTML = [
+            '<div class="p-8 text-center rounded-xl border border-dashed border-slate-300 bg-slate-50">',
+            '  <p class="text-sm font-semibold text-slate-700">No stall notes saved in this view yet.</p>',
+            '  <p class="text-xs text-slate-500 mt-1">Use the "Take Notes" tab to capture Castor Derivative or Petrochemical Pivot stall conversations, or load sample notes above.</p>',
+            '</div>'
+          ].join('');
+          return;
+        }
+
+        container.innerHTML = filtered.map(function (n) {
+          if (n.type === 'castor') {
+            return [
+              '<article class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/30 space-y-2">',
+              '  <div class="flex flex-wrap items-center justify-between gap-2">',
+              '    <div>',
+              '      <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800">Castor Derivative Stall</span>',
+              '      <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">' + escapeHtml(n.company) + ' <span class="text-xs font-normal text-slate-500">(' + escapeHtml(n.booth || 'No Booth #') + ')</span></h4>',
+              '    </div>',
+              '    <div class="flex items-center gap-1.5">',
+              '      <button type="button" data-copy-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-100">Copy Text</button>',
+              '      <button type="button" data-delete-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-red-50 border border-red-200 text-red-700 hover:bg-red-100">Delete</button>',
+              '    </div>',
+              '  </div>',
+              '  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 pt-1">',
+              '    <div><strong>Contact:</strong> ' + escapeHtml(n.contact || '-') + ' | <strong>Origin:</strong> ' + escapeHtml(n.location || '-') + '</div>',
+              '    <div><strong>Integration:</strong> ' + escapeHtml(n.sourcing || '-') + '</div>',
+              '    <div><strong>Product 1:</strong> ' + escapeHtml(n.prod1 || '-') + ' (' + escapeHtml(n.spec1 || '-') + ')</div>',
+              '    <div><strong>Product 2:</strong> ' + escapeHtml(n.prod2 || '-') + ' (' + escapeHtml(n.spec2 || '-') + ')</div>',
+              '    <div><strong>MOQ / Cap:</strong> ' + escapeHtml(n.moq || '-') + ' | ' + escapeHtml(n.capacity || '-') + '</div>',
+              '    <div><strong>Certs:</strong> ' + escapeHtml((n.certs || []).join(', ') || '-') + '</div>',
+              '  </div>',
+              (n.extraNotes ? '<p class="text-xs text-slate-600 bg-white p-2 rounded border border-slate-200"><strong>Notes:</strong> ' + escapeHtml(n.extraNotes) + '</p>' : ''),
+              '</article>'
+            ].join('');
+          } else {
+            return [
+              '<article class="p-4 rounded-xl border border-amber-200 bg-amber-50/30 space-y-2">',
+              '  <div class="flex flex-wrap items-center justify-between gap-2">',
+              '    <div>',
+              '      <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-amber-100 text-amber-900">Petrochemical Pivot Stall</span>',
+              '      <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">' + escapeHtml(n.company) + ' <span class="text-xs font-normal text-slate-500">(' + escapeHtml((n.lines || []).join(', ') || 'General') + ')</span></h4>',
+              '    </div>',
+              '    <div class="flex items-center gap-1.5">',
+              '      <button type="button" data-copy-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-100">Copy Text</button>',
+              '      <button type="button" data-delete-note="' + n.id + '" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-red-50 border border-red-200 text-red-700 hover:bg-red-100">Delete</button>',
+              '    </div>',
+              '  </div>',
+              '  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 pt-1">',
+              '    <div><strong>Contact:</strong> ' + escapeHtml(n.contact || '-') + '</div>',
+              '    <div><strong>Bio-Feedstock Appetite:</strong> ' + escapeHtml(n.decarb || '-') + ' (' + escapeHtml(n.biocarbon || '-') + ')</div>',
+              '    <div><strong>Toll Capacity:</strong> ' + escapeHtml(n.tollCap || '-') + ' (Min Batch: ' + escapeHtml(n.batch || '-') + ')</div>',
+              '    <div><strong>Benchmark & Gap:</strong> ' + escapeHtml(n.priceBench || '-') + ' | ' + escapeHtml(n.perfGap || '-') + '</div>',
+              (n.machVendor ? '    <div class="sm:col-span-2"><strong>ProMach Vendor:</strong> ' + escapeHtml(n.machVendor) + ' — ' + escapeHtml(n.machSetup || '-') + ' (' + escapeHtml(n.machCapex || '-') + ')</div>' : ''),
+              '  </div>',
+              '</article>'
+            ].join('');
+          }
+        }).join('');
+      }
+
+      function escapeHtml(str) {
+        return String(str || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      // Download helper
+      function downloadFile(filename, content, mimeType) {
+        const blob = new Blob([content], { type: mimeType || 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+
+      // Initialize Event Listeners
+      document.addEventListener('DOMContentLoaded', function () {
+        loadState();
+        updateSavedBadges();
+        updateChecklistProgress();
+
+        // Tab buttons
+        document.querySelectorAll('.nav-tab-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const target = btn.getAttribute('data-nav');
+            if (target) switchTab(target);
+          });
+        });
+
+        // Header Jump to New Note
+        document.getElementById('btnJumpNewNote').addEventListener('click', function () {
+          switchTab('notes');
+        });
+
+        // Quick switch buttons on top banner
+        document.getElementById('btnSwitchToCastorNote').addEventListener('click', function () {
+          switchTab('notes');
+          switchNoteMode('castor');
+        });
+        document.getElementById('btnSwitchToPetroNote').addEventListener('click', function () {
+          switchTab('notes');
+          switchNoteMode('petro');
+        });
+
+        // Mode switcher inside Notes view
+        document.getElementById('btnModeCastor').addEventListener('click', function () {
+          switchNoteMode('castor');
+        });
+        document.getElementById('btnModePetro').addEventListener('click', function () {
+          switchNoteMode('petro');
+        });
+        document.getElementById('btnModePlaintext').addEventListener('click', function () {
+          switchNoteMode('plaintext');
+        });
+
+        // Tier Filter Buttons
+        document.querySelectorAll('.tier-filter-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const tier = btn.getAttribute('data-tier');
+            document.querySelectorAll('.tier-filter-btn').forEach(function (b) {
+              b.className = 'tier-filter-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 shrink-0';
+            });
+            btn.className = 'tier-filter-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-500 text-white shrink-0';
+
+            document.querySelectorAll('.tier-card').forEach(function (card) {
+              if (tier === 'all' || card.getAttribute('data-tier-card') === tier) {
+                card.classList.remove('hidden');
+              } else {
+                card.classList.add('hidden');
+              }
+            });
+          });
+        });
+
+        // Prefill Castor Note from Tier Cards
+        document.querySelectorAll('[data-prefill-castor]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const prod = btn.getAttribute('data-prefill-castor');
+            switchTab('notes');
+            switchNoteMode('castor');
+            const input = document.getElementById('c_prod1');
+            if (input) {
+              input.value = prod;
+              document.getElementById('c_company').focus();
+            }
+          });
+        });
+
+        // Prefill Petro Note from Pivot Cards
+        document.querySelectorAll('[data-prefill-petro]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const lineVal = btn.getAttribute('data-prefill-petro');
+            switchTab('notes');
+            switchNoteMode('petro');
+            document.querySelectorAll('input[name="p_line"]').forEach(function (cb) {
+              cb.checked = (cb.value === lineVal);
+            });
+            document.getElementById('p_company').focus();
+          });
+        });
+
+        // Checklist Progress Persistence
+        document.querySelectorAll('input[data-track-check]').forEach(function (cb) {
+          cb.addEventListener('change', function () {
+            const key = cb.getAttribute('data-track-check');
+            checkedItems[key] = cb.checked;
+            saveChecksState();
+          });
+        });
+
+        // Global Search Filter
+        const searchInput = document.getElementById('globalSearchInput');
+        const btnClearSearch = document.getElementById('btnClearSearch');
+        searchInput.addEventListener('input', function () {
+          const q = searchInput.value.trim().toLowerCase();
+          if (q.length > 0) btnClearSearch.classList.remove('hidden');
+          else btnClearSearch.classList.add('hidden');
+
+          document.querySelectorAll('.searchable-item').forEach(function (item) {
+            const text = item.textContent.toLowerCase();
+            if (!q || text.indexOf(q) !== -1) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+
+        btnClearSearch.addEventListener('click', function () {
+          searchInput.value = '';
+          btnClearSearch.classList.add('hidden');
+          document.querySelectorAll('.searchable-item').forEach(function (item) {
+            item.classList.remove('hidden');
+          });
+        });
+
+        // Castor Form Submit & Reset
+        document.getElementById('formCastorNote').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const data = collectCastorFormData();
+          if (!data.company) {
+            showToast('Please enter a Company Name.');
+            return;
+          }
+          savedNotes.unshift(data);
+          saveNotesState();
+          e.target.reset();
+          showToast('Castor Stall Note saved to Logbook!');
+          switchTab('saved');
+        });
+
+        document.getElementById('btnResetCastorForm').addEventListener('click', function () {
+          document.getElementById('formCastorNote').reset();
+          showToast('Castor form cleared.');
+        });
+
+        document.getElementById('btnCopyDraftCastor').addEventListener('click', function () {
+          const data = collectCastorFormData();
+          copyTextToClipboard(formatCastorNoteText(data), 'Formatted Castor Note copied!');
+        });
+
+        // Petro Form Submit & Reset
+        document.getElementById('formPetroNote').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const data = collectPetroFormData();
+          if (!data.company) {
+            showToast('Please enter a Company / Booth name.');
+            return;
+          }
+          savedNotes.unshift(data);
+          saveNotesState();
+          e.target.reset();
+          showToast('Petrochemical Pivot Note saved to Logbook!');
+          switchTab('saved');
+        });
+
+        document.getElementById('btnResetPetroForm').addEventListener('click', function () {
+          document.getElementById('formPetroNote').reset();
+          showToast('Petrochem form cleared.');
+        });
+
+        document.getElementById('btnCopyDraftPetro').addEventListener('click', function () {
+          const data = collectPetroFormData();
+          copyTextToClipboard(formatPetroNoteText(data), 'Formatted Petrochem Note copied!');
+        });
+
+        // Copy Raw Templates
+        document.querySelectorAll('.copy-raw-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const targetId = btn.getAttribute('data-copy-target');
+            const pre = document.getElementById(targetId);
+            if (pre) copyTextToClipboard(pre.textContent, 'Plaintext template copied!');
+          });
+        });
+
+        // Logbook Filters
+        document.querySelectorAll('.log-filter-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            currentLogFilter = btn.getAttribute('data-log-filter');
+            document.querySelectorAll('.log-filter-btn').forEach(function (b) {
+              b.className = 'log-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700';
+            });
+            btn.className = 'log-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-900 text-white';
+            renderSavedNotes();
+          });
+        });
+
+        // Delegate Copy & Delete inside Saved Notes Container
+        document.getElementById('savedNotesContainer').addEventListener('click', function (e) {
+          const copyBtn = e.target.closest('[data-copy-note]');
+          if (copyBtn) {
+            const id = copyBtn.getAttribute('data-copy-note');
+            const note = savedNotes.find(function (n) { return n.id === id; });
+            if (note) {
+              const txt = note.type === 'castor' ? formatCastorNoteText(note) : formatPetroNoteText(note);
+              copyTextToClipboard(txt, 'Stall note copied to clipboard!');
+            }
+            return;
+          }
+
+          const delBtn = e.target.closest('[data-delete-note]');
+          if (delBtn) {
+            const id = delBtn.getAttribute('data-delete-note');
+            savedNotes = savedNotes.filter(function (n) { return n.id !== id; });
+            saveNotesState();
+            renderSavedNotes();
+            showToast('Note removed from Logbook.');
+          }
+        });
+
+        // Load Sample Notes
+        document.getElementById('btnLoadSampleNotes').addEventListener('click', function () {
+          const samples = [
+            {
+              id: 'sample_castor_1',
+              type: 'castor',
+              timestamp: 'Sample Entry',
+              company: 'Kutch Speciality Oleochem Pvt Ltd',
+              contact: 'viral Shah — Export Head',
+              booth: 'Hall 2, Stall C-19',
+              location: 'Gandhidham (Kutch) / FOB Mundra',
+              sourcing: 'Own Crushing Plant (Kutch/Banaskantha/Mehsana)',
+              prod1: '12-Hydroxystearic Acid (12-HSA Flakes)',
+              spec1: 'Acid Val 177, Hydroxyl Val 156, MP 76°C, Gardner < 2',
+              prod2: 'Hydrogenated Castor Oil (HCO / Castor Wax)',
+              spec2: 'MP 86°C, Iodine Val < 3, $1,580/MT FOB Mundra',
+              packaging: ['25 kg / Jumbo Bags (Flakes)', '1 MT IBC Totes', 'Private Label / Neutralization'],
+              moq: '1 MT Trial / 18 MT FCL',
+              capacity: '14 Days / 2,500 MT/month',
+              markets: 'Europe (REACH), US, Japan, Domestic Grease Makers',
+              certs: ['EU REACH Active', 'ISO 9001/14001', 'Kosher / Halal'],
+              actions: ['Request Sample', 'Request Export Price Quotation (FOB Mundra / CIF)'],
+              sampleQty: '1 kg flake pack',
+              extraNotes: 'Physical visiting card stapled; scanned QR for COA & TDS PDF.'
+            },
+            {
+              id: 'sample_petro_1',
+              type: 'petro',
+              timestamp: 'Sample Entry',
+              company: 'WestCoast Polyurethanes & Ethoxylates Ltd (Hall 1, A-04)',
+              contact: 'Dr. S. Kulkarni — R&D Formulator - Coatings & Resins',
+              lines: ['Polyols/PU', 'Surfactants'],
+              decarb: 'High pressure from EU tier-1 automotive seating buyers for bio-polyol blends',
+              biocarbon: '25% bio-carbon replacement requested',
+              tollCap: 'Yes — spare 10 KL ethoxylation reactor in Dahej for PEG-36/40 Castor Oil job work',
+              batch: '8 MT minimum campaign',
+              priceBench: 'Petro polyether polyol @ $1.85/kg vs Castor Bio-polyol OH# 160',
+              perfGap: 'Castor bio-polyol improves moisture resistance in PU coatings',
+              machVendor: 'ProMach Reactor Tech (Hall 4)',
+              machSetup: 'SS316L high-pressure autoclave + vacuum stripping column',
+              machCapex: '₹4.2 Cr for 5-TPD batch line, 5 months lead time'
+            }
+          ];
+          savedNotes = samples.concat(savedNotes);
+          saveNotesState();
+          renderSavedNotes();
+          showToast('Loaded 2 sample exhibition stall notes!');
+        });
+
+        // Export .TXT
+        document.getElementById('btnExportTxt').addEventListener('click', function () {
+          if (savedNotes.length === 0) {
+            showToast('No saved notes to export yet.');
+            return;
+          }
+          const blocks = savedNotes.map(function (n) {
+            return n.type === 'castor' ? formatCastorNoteText(n) : formatPetroNoteText(n);
+          });
+          downloadFile('India_Chem_Stall_Notes.txt', blocks.join('\n\n----------------------------------------\n\n'), 'text/plain;charset=utf-8');
+          showToast('Exported .TXT report!');
+        });
+
+        // Export .CSV
+        document.getElementById('btnExportCsv').addEventListener('click', function () {
+          if (savedNotes.length === 0) {
+            showToast('No saved notes to export yet.');
+            return;
+          }
+          const headers = ['Type', 'Timestamp', 'Company_or_Booth', 'Contact_Role', 'Location_or_Lines', 'Primary_Product_or_BioAppetite', 'Specs_or_TollCapacity', 'MOQ_or_Benchmark', 'Certifications_or_Machinery', 'Extra_Notes'];
+          const rows = savedNotes.map(function (n) {
+            if (n.type === 'castor') {
+              return [
+                'Castor Derivative',
+                n.timestamp,
+                n.company,
+                n.contact,
+                (n.booth || '') + ' / ' + (n.location || ''),
+                (n.prod1 || '') + ' & ' + (n.prod2 || ''),
+                (n.spec1 || '') + ' | ' + (n.spec2 || ''),
+                'MOQ: ' + (n.moq || '') + ' / Cap: ' + (n.capacity || ''),
+                (n.certs || []).join('; '),
+                n.extraNotes || ''
+              ];
+            } else {
+              return [
+                'Petrochem Pivot',
+                n.timestamp,
+                n.company,
+                n.contact,
+                (n.lines || []).join('; '),
+                'Decarb: ' + (n.decarb || '') + ' / Bio%: ' + (n.biocarbon || ''),
+                'Toll: ' + (n.tollCap || '') + ' (Min: ' + (n.batch || '') + ')',
+                'Bench: ' + (n.priceBench || '') + ' / Gap: ' + (n.perfGap || ''),
+                'Vendor: ' + (n.machVendor || '') + ' (' + (n.machSetup || '') + ', ' + (n.machCapex || '') + ')',
+                ''
+              ];
+            }
+          });
+
+          const csvContent = [headers].concat(rows).map(function (row) {
+            return row.map(function (cell) {
+              return '"' + String(cell || '').replace(/"/g, '""') + '"';
+            }).join(',');
+          }).join('\n');
+
+          downloadFile('India_Chem_Stall_Notes.csv', csvContent, 'text/csv;charset=utf-8');
+          showToast('Exported .CSV spreadsheet!');
+        });
+
+        // Quick Prompts Modal
+        const modal = document.getElementById('modalQuickPrompts');
+        document.getElementById('btnOpenQuickPrompts').addEventListener('click', function () {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        });
+        document.getElementById('btnCloseQuickPrompts').addEventListener('click', function () {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
